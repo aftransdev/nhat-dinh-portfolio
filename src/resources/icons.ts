@@ -12,6 +12,7 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiChartBar,
 } from "react-icons/hi2";
 
 import {
@@ -27,6 +28,10 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiJira,
+  SiConfluence,
+  SiPython,
+  SiMysql,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -58,6 +63,11 @@ export const iconLibrary: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
+  jira: SiJira,
+  confluence: SiConfluence,
+  powerbi: HiChartBar,
+  python: SiPython,
+  sql: SiMysql,
   facebook: FaFacebook,
   pinterest: FaPinterest,
   whatsapp: FaWhatsapp,
