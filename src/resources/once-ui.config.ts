@@ -14,7 +14,7 @@ import {
 import { home, person, social } from "./content";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://nhatdinh.com";
+const baseURL: string = "https://nhatdinh.netlify.app";
 
 const routes: RoutesConfig = {
   "/": true,
