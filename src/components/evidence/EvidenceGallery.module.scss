@@ -1,0 +1,345 @@
+/* ------------------------------- item cards ------------------------------- */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition:
+    border-color 0.18s var(--ease),
+    box-shadow 0.18s var(--ease);
+}
+
+.item:hover {
+  border-color: var(--grey-300);
+  box-shadow: 0 1px 2px rgba(13, 24, 38, 0.05), 0 12px 30px -16px rgba(13, 24, 38, 0.2);
+}
+
+/* Thumbnail: fixed aspect box holding a transform-scaled artefact canvas */
+.thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1160 / 720;
+  overflow: hidden;
+  background: var(--grey-050);
+  border-bottom: var(--border);
+}
+
+.thumbFade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, rgba(255, 255, 255, 0.55) 100%);
+  pointer-events: none;
+}
+
+.zoom {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  padding: 0.4375rem 0.75rem;
+  border-radius: 2px;
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.18s var(--ease),
+    transform 0.18s var(--ease);
+}
+
+.item:hover .zoom,
+.item:focus-visible .zoom {
+  opacity: 1;
+  transform: none;
+}
+
+.itemBody {
+  padding: 1.5rem 1.625rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.itemIndex {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent-700);
+}
+
+.itemTitle {
+  margin-top: 0.625rem;
+  font-size: 1.1875rem;
+  letter-spacing: -0.018em;
+}
+
+.itemSub {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.answersLabel {
+  margin-top: 1.375rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+
+.answer {
+  position: relative;
+  padding-left: 0.9375rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+.answer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5625rem;
+  width: 0.375rem;
+  height: 1px;
+  background: var(--accent-500);
+}
+
+.itemFoot {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.item:hover .itemFoot svg {
+  transform: translateX(3px);
+}
+
+.itemFoot svg {
+  transition: transform 0.18s var(--ease);
+}
+
+@media (max-width: 900px) {
+  .list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --------------------------------- modal --------------------------------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2.5vw, 2.5rem);
+  background: rgba(6, 14, 25, 0.62);
+  border: 0;
+  animation: fade 0.16s var(--ease) both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 82rem;
+  max-height: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 70px -20px rgba(6, 14, 25, 0.55);
+}
+
+.dialogHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: var(--border);
+  flex: none;
+}
+
+.dialogIndex {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.dialogTitle {
+  margin-top: 0.375rem;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.dialogSub {
+  margin-top: 0.375rem;
+  max-width: 52rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+  transition:
+    border-color 0.16s var(--ease),
+    color 0.16s var(--ease);
+}
+
+.close:hover {
+  border-color: var(--navy-700);
+  color: var(--navy-900);
+}
+
+.dialogBody {
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  background: var(--grey-050);
+}
+
+.stage {
+  padding: clamp(0.75rem, 1.5vw, 1.5rem);
+  overflow-x: auto;
+}
+
+/* Narrow screens pan the artefact rather than shrinking it past legibility */
+.stageHint {
+  display: none;
+  padding: 0 clamp(0.75rem, 1.5vw, 1.5rem) 0.75rem;
+  font-size: 0.75rem;
+  color: var(--ink-4);
+}
+
+@media (max-width: 760px) {
+  .stageHint {
+    display: block;
+  }
+}
+
+.explain {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 1.5rem 2.5rem;
+  padding: 0 clamp(0.75rem, 1.5vw, 1.5rem) clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.explainCard {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.375rem 1.375rem;
+}
+
+.explainLabel {
+  padding-bottom: 0.75rem;
+  border-bottom: var(--hairline);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.explainText {
+  margin-top: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.componentGrid {
+  margin-top: 0.875rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.component {
+  border-left: 2px solid var(--accent-100);
+  padding-left: 0.6875rem;
+}
+
+.componentName {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy-900);
+}
+
+.componentDesc {
+  margin-top: 0.1875rem;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--ink-3);
+}
+
+@media (max-width: 900px) {
+  .explain {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .componentGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

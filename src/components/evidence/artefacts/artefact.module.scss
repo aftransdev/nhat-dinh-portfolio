@@ -1,0 +1,478 @@
+/* ------------------------------------------------------------------
+   Recreated governance artefacts. Everything is authored on a fixed
+   1160 x 720 canvas so a single scale factor renders both the card
+   thumbnail and the full-size modal view without reflow.
+   ------------------------------------------------------------------ */
+
+.canvas {
+  width: 1160px;
+  height: 720px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  font-family: var(--font-sans);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+/* --------------------------------- chrome -------------------------------- */
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 14px 20px;
+  background: var(--navy-900);
+  color: #fff;
+  flex: none;
+}
+
+.barTitle {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.barSub {
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--on-navy-3);
+  letter-spacing: 0.02em;
+}
+
+.barMeta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.barField {
+  text-align: right;
+}
+
+.barFieldLabel {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-navy-3);
+}
+
+.barFieldValue {
+  margin-top: 2px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.illustrative {
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-navy-2);
+  white-space: nowrap;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--grey-050);
+}
+
+.foot {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  border-top: 1px solid var(--grey-200);
+  background: var(--white);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+/* --------------------------------- panels -------------------------------- */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 2px;
+}
+
+.panelHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--grey-100);
+  flex: none;
+}
+
+.panelTitle {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.panelNote {
+  font-size: 9.5px;
+  color: var(--ink-4);
+  font-variant-numeric: tabular-nums;
+}
+
+.panelBody {
+  padding: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.panelBodyFlush {
+  padding: 0;
+  flex: 1;
+  min-height: 0;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  min-height: 0;
+}
+
+/* --------------------------------- kpi tiles ------------------------------ */
+
+.kpiRow {
+  display: grid;
+  gap: 12px;
+  flex: none;
+}
+
+.kpi {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: 2px;
+  border-top: 2px solid var(--grey-300);
+  padding: 11px 13px 12px;
+}
+
+.kpiOk {
+  border-top-color: var(--ok);
+}
+.kpiWarn {
+  border-top-color: var(--warn);
+}
+.kpiRisk {
+  border-top-color: var(--risk);
+}
+.kpiInfo {
+  border-top-color: var(--accent-600);
+}
+
+.kpiLabel {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.kpiValue {
+  margin-top: 6px;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--navy-900);
+  font-variant-numeric: tabular-nums;
+}
+
+.kpiValueSm {
+  font-size: 17px;
+}
+
+.kpiDelta {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.deltaUp {
+  color: var(--ok);
+  font-weight: 600;
+}
+.deltaDown {
+  color: var(--risk);
+  font-weight: 600;
+}
+.deltaFlat {
+  color: var(--ink-4);
+  font-weight: 600;
+}
+
+/* ---------------------------------- pills -------------------------------- */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pillOk {
+  background: var(--ok-bg);
+  border-color: var(--ok-bd);
+  color: var(--ok);
+}
+.pillWarn {
+  background: var(--warn-bg);
+  border-color: var(--warn-bd);
+  color: var(--warn);
+}
+.pillRisk {
+  background: var(--risk-bg);
+  border-color: var(--risk-bd);
+  color: var(--risk);
+}
+.pillInfo {
+  background: var(--info-bg);
+  border-color: var(--info-bd);
+  color: var(--info);
+}
+.pillNeutral {
+  background: var(--grey-075);
+  border-color: var(--grey-200);
+  color: var(--ink-3);
+}
+
+/* ---------------------------------- tables ------------------------------- */
+
+.table {
+  width: 100%;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th {
+  padding: 5.5px 10px;
+  text-align: left;
+  background: var(--grey-050);
+  border-bottom: 1px solid var(--grey-200);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 5.5px 10px;
+  border-bottom: 1px solid var(--grey-075);
+  color: var(--ink-2);
+  vertical-align: middle;
+  line-height: 1.35;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.table tbody tr:nth-child(even) td {
+  background: var(--grey-025);
+}
+
+.tdStrong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.tdId {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+
+.tdNum {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.tdNumNeg {
+  text-align: right;
+  color: var(--risk);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tdNumPos {
+  text-align: right;
+  color: var(--ok);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tfoot td {
+  background: var(--grey-050) !important;
+  border-top: 1px solid var(--grey-300);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* --------------------------------- legends -------------------------------- */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 14px;
+  font-size: 9px;
+  color: var(--ink-3);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 1px;
+  flex: none;
+}
+
+/* -------------------------- generic list / bar rows ---------------------- */
+
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--grey-075);
+  font-size: 10px;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+.listRow:last-child {
+  border-bottom: 0;
+}
+
+.listLabel {
+  flex: 1;
+  min-width: 0;
+  color: var(--ink);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listMeta {
+  font-size: 9.5px;
+  color: var(--ink-4);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.barTrack {
+  height: 7px;
+  background: var(--grey-100);
+  border-radius: 1px;
+  overflow: hidden;
+  display: flex;
+}
+
+.barSeg {
+  height: 100%;
+}
+
+/* ---------------------------- gantt / calendar --------------------------- */
+
+.gridLabel {
+  font-size: 9.5px;
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gridSub {
+  font-size: 8.5px;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Narrow-panel variant: label above meta so neither gets ellipsed */
+.listRowStack {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--grey-075);
+}
+
+.listRowStack:last-child {
+  border-bottom: 0;
+}
+
+.stackText {
+  flex: 1;
+  min-width: 0;
+}
+
+.stackLabel {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.stackMeta {
+  margin-top: 1px;
+  font-size: 9px;
+  color: var(--ink-4);
+  line-height: 1.3;
+}

@@ -1,0 +1,270 @@
+/* --------------------------- vertical timeline ---------------------------- */
+
+.timeline {
+  position: relative;
+}
+
+.entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 0 2.75rem;
+  padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.entry:last-child {
+  padding-bottom: 0;
+}
+
+/* The rail lives on the right edge of the date column */
+.entry::before {
+  content: "";
+  position: absolute;
+  left: 9.5rem;
+  top: 0.5rem;
+  bottom: 0;
+  width: 1px;
+  background: var(--grey-200);
+}
+
+.entry:last-child::before {
+  bottom: auto;
+  height: 0;
+}
+
+.marker {
+  position: absolute;
+  left: 9.5rem;
+  top: 0.375rem;
+  width: 9px;
+  height: 9px;
+  transform: translateX(-4px);
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--grey-400);
+}
+
+.markerCurrent {
+  background: var(--accent-600);
+  border-color: var(--accent-600);
+  box-shadow: 0 0 0 3px var(--accent-100);
+}
+
+.period {
+  padding-top: 0.0625rem;
+  padding-right: 1.5rem;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.card {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 1.625rem 1.75rem 1.75rem;
+}
+
+.company {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.role {
+  margin-top: 0.5rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+  letter-spacing: -0.02em;
+}
+
+.descriptor {
+  margin-top: 0.4375rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.formal {
+  font-style: normal;
+  color: var(--ink-4);
+}
+
+.scopeLine {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: var(--hairline);
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.blockLabel {
+  margin-top: 1.5rem;
+  margin-bottom: 0.6875rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1px;
+  background: var(--grey-200);
+  border: 1px solid var(--grey-200);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric {
+  background: var(--grey-025);
+  padding: 0.9375rem 1rem 1rem;
+}
+
+.metricValue {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.026em;
+  line-height: 1.1;
+}
+
+.metricLabel {
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-3);
+}
+
+.notes {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+
+.note {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.note::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.625rem;
+  width: 0.375rem;
+  height: 1px;
+  background: var(--grey-400);
+}
+
+@media (max-width: 760px) {
+  .entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding-left: 1.375rem;
+  }
+  .entry::before,
+  .marker {
+    left: 0;
+  }
+  .marker {
+    transform: none;
+    top: 0.4375rem;
+  }
+  .period {
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
+/* ----------------- credentials (lower visual priority) -------------------- */
+
+.credGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.credCard {
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.625rem 1.625rem;
+}
+
+.credLabel {
+  padding-bottom: 0.875rem;
+  border-bottom: var(--border);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.credRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 0.875rem;
+  border-bottom: var(--hairline);
+}
+
+.credRow:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.credName {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.credSub {
+  margin-top: 0.1875rem;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  line-height: 1.45;
+}
+
+.credYear {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+
+.smallGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .credGrid,
+  .smallGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

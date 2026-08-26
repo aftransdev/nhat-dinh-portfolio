@@ -1,130 +1,156 @@
+import Link from "next/link";
+import { about, capabilities, caseStudies, hero, selectedImpact } from "@/lib/content";
+import { siteConfig } from "@/lib/site";
 import {
-  Heading,
-  Text,
+  ArrowRight,
   Button,
-  Avatar,
-  RevealFx,
-  Column,
-  Badge,
-  Row,
-  Schema,
-  Meta,
-  Line,
-} from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
+  Card,
+  CardBody,
+  CardIndex,
+  CardTitle,
+  Grid,
+  IconDownload,
+  KpiBand,
+  MetricRow,
+  Section,
+  SectionHead,
+  TextLink,
+} from "@/components/ui";
+import s from "./home.module.scss";
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
-}
+const featured = caseStudies.filter((c) => c.featured);
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
-      <Schema
-        as="webPage"
-        baseURL={baseURL}
-        path={home.path}
-        title={home.title}
-        description={home.description}
-        image={`/api/og/generate?title=${encodeURIComponent(home.title)}`}
-        author={{
-          name: person.name,
-          url: `${baseURL}${about.path}`,
-          image: `${baseURL}${person.avatar}`,
-        }}
-      />
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
-          {home.featured.display && (
-            <RevealFx
-              fillWidth
-              horizontal="center"
-              paddingTop="16"
-              paddingBottom="32"
-              paddingLeft="12"
-            >
-              <Badge
-                background="brand-alpha-weak"
-                paddingX="12"
-                paddingY="4"
-                onBackground="neutral-strong"
-                textVariant="label-default-s"
-                arrow={false}
-                href={home.featured.href}
+    <>
+      {/* ------------------------------- hero ------------------------------ */}
+      <section className={s.hero}>
+        <div className="shell">
+          <div className={`${s.heroGrid} rise`}>
+            <div>
+              <h1 className={s.name}>{hero.name}</h1>
+              <div className={s.roleLine}>
+                {["PMO", "Portfolio Governance", "Transformation"].map((r, i) => (
+                  <span key={r} style={{ display: "inline-flex", alignItems: "center", gap: "0.75rem" }}>
+                    {i > 0 && <span className={s.roleDiv} aria-hidden="true" />}
+                    <span className={s.roleItem}>{r}</span>
+                  </span>
+                ))}
+              </div>
+              <p className={s.headline}>{hero.headline}</p>
+              <div className={s.heroBody}>
+                <p>{hero.lede}</p>
+                <p>{hero.body}</p>
+              </div>
+              <p className={s.locationLine}>
+                <span>Based in the {siteConfig.location}</span>
+                <span className={s.roleDiv} aria-hidden="true" />
+                <span>{siteConfig.availability}</span>
+              </p>
+              <div className={s.heroActions}>
+                <Button href="/case-studies">
+                  View case studies
+                  <ArrowRight />
+                </Button>
+                <Button href="/pmo-evidence" variant="secondary">
+                  View PMO evidence
+                </Button>
+                <Button href={siteConfig.cvHref} variant="secondary">
+                  <IconDownload size={13} />
+                  Download CV
+                </Button>
+              </div>
+            </div>
+
+            <aside className={s.glance} aria-label="Profile at a glance">
+              <div className={s.glanceHead}>
+                <p className="eyebrow eyebrow--muted">At a glance</p>
+              </div>
+              {hero.glance.map((row) => (
+                <div key={row.label} className={s.glanceRow}>
+                  <p className={s.glanceLabel}>{row.label}</p>
+                  <p className={s.glanceValue}>{row.value}</p>
+                </div>
+              ))}
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* --------------------------- impact strip -------------------------- */}
+      <KpiBand eyebrow="Selected impact" items={selectedImpact} />
+
+      {/* ----------------------------- expertise --------------------------- */}
+      <Section>
+        <SectionHead
+          eyebrow="What I do"
+          title="Six capability areas across portfolio governance"
+          sub="The disciplines required to keep a complex portfolio governed, funded and delivery-ready."
+          aside={<TextLink href="/expertise">All expertise</TextLink>}
+        />
+        <Grid cols={3}>
+          {capabilities.map((c) => (
+            <Card key={c.id} href={`/expertise#${c.id}`} className={s.expertiseCard}>
+              <CardIndex>{c.index}</CardIndex>
+              <CardTitle>{c.title}</CardTitle>
+              <CardBody>{c.summary}</CardBody>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+
+      {/* --------------------------- case studies -------------------------- */}
+      <Section tone="grey">
+        <SectionHead
+          eyebrow="Featured case studies"
+          title="Governance applied in complex delivery environments"
+          sub="Each case follows the same structure: context, challenge, contribution, actions and quantified outcomes."
+          aside={<TextLink href="/case-studies">All case studies</TextLink>}
+        />
+        <Grid cols={3}>
+          {featured.map((c) => (
+            <Card key={c.slug} href={`/case-studies/${c.slug}`} className={s.caseCard}>
+              <p className={s.caseCompany}>{c.company}</p>
+              <h3 className={s.caseTitle}>{c.title}</h3>
+              <p className={s.caseSummary}>{c.cardSummary}</p>
+              <MetricRow items={c.cardMetrics} stack />
+              <span className={s.caseFoot}>
+                View case study
+                <ArrowRight />
+              </span>
+            </Card>
+          ))}
+        </Grid>
+      </Section>
+
+      {/* ------------------------------- about ----------------------------- */}
+      <Section>
+        <SectionHead eyebrow="About" title="Governance that supports decisions" />
+        <div className={s.aboutGrid}>
+          <p className={s.aboutQuote}>{about.quote}</p>
+          <div className={s.aboutBody}>
+            {about.paragraphs.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+            <p style={{ marginTop: "1.25rem" }}>
+              <Link
+                href="/experience"
+                style={{ color: "var(--accent-700)", fontWeight: 600, fontSize: "0.9375rem" }}
               >
-                <Row paddingY="2">{home.featured.title}</Row>
-              </Badge>
-            </RevealFx>
-          )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
-          </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
-            </Text>
-          </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
-            <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Row>
-            </Button>
-          </RevealFx>
-        </Column>
-      </Column>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
-      {routes["/blog"] && (
-        <Column fillWidth gap="24" marginBottom="l">
-          <Row fillWidth paddingRight="64">
-            <Line maxWidth={48} />
-          </Row>
-          <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
-            <Row flex={1} paddingLeft="l" paddingTop="24">
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Latest from the blog
-              </Heading>
-            </Row>
-            <Row flex={3} paddingX="20">
-              <Posts range={[1, 2]} columns="2" />
-            </Row>
-          </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
-          </Row>
-        </Column>
-      )}
-      <Projects range={[2]} />
-      <Mailchimp />
-    </Column>
+                Full experience and credentials →
+              </Link>
+            </p>
+          </div>
+        </div>
+        <div className={s.principles}>
+          {about.principles.map((p) => (
+            <div key={p.title} className={s.principle}>
+              <p className={s.principleTitle}>{p.title}</p>
+              <p className={s.principleBody}>{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+    </>
   );
 }

@@ -1,0 +1,126 @@
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 2rem 4rem;
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: var(--border);
+  scroll-margin-top: 6rem;
+}
+
+.block:last-child {
+  border-bottom: var(--border);
+}
+
+.head {
+  position: sticky;
+  top: 6.5rem;
+  align-self: start;
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--accent-700);
+}
+
+.title {
+  margin-top: 0.875rem;
+  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem);
+  letter-spacing: -0.022em;
+}
+
+.summary {
+  margin-top: 0.875rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  text-wrap: pretty;
+  max-width: 26rem;
+}
+
+.intro {
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.items {
+  margin-top: 1.5rem;
+}
+
+.closing {
+  margin-top: 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.evidence {
+  margin-top: 1.5rem;
+}
+
+/* -------------------------------- toolkit -------------------------------- */
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.techCard {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 1.5rem;
+}
+
+.techLabel {
+  padding-bottom: 0.875rem;
+  border-bottom: var(--border);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+.techItems {
+  margin-top: 0.875rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.techItem {
+  padding-block: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+  border-bottom: var(--hairline);
+}
+
+.techItem:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .block {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+  .head {
+    position: static;
+  }
+  .techGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
