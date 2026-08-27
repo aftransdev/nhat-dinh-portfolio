@@ -10,14 +10,19 @@ export const siteConfig = {
   availability: "Open to London opportunities",
 } as const;
 
+/* Drives the header, the mobile panel, the footer and the sitemap — the one
+   place to add or hide a tab. */
 export const nav = [
   { label: "Home", href: "/" },
   { label: "Expertise", href: "/expertise" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "PMO Evidence", href: "/pmo-evidence" },
   { label: "Experience", href: "/experience" },
   { label: "Qualifications", href: "/qualifications" },
 ] as const;
+
+/* Built and reachable at its URL, but deliberately kept out of the
+   navigation. Move the entry back into `nav` above to surface it again. */
+export const unlistedRoutes = [{ label: "PMO Evidence", href: "/pmo-evidence" }] as const;
 
 export const media = {
   portrait: "/media/nhat-dinh-portrait.jpg",

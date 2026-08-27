@@ -74,7 +74,7 @@ export function Button({
   className?: string;
 }) {
   const cls = cx(s.btn, s[variant], className);
-  if (external || href.startsWith("mailto:") || href.startsWith("http")) {
+  if (external || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("http")) {
     return (
       <a
         className={cls}

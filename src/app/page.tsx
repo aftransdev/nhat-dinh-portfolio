@@ -65,8 +65,8 @@ export default function HomePage() {
                   View case studies
                   <ArrowRight />
                 </Button>
-                <Button href="/pmo-evidence" variant="secondary">
-                  View PMO evidence
+                <Button href="#contact" variant="secondary">
+                  Contact me
                 </Button>
               </div>
             </div>
