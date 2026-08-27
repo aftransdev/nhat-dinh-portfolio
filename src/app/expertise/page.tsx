@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { capabilities, toolkit } from "@/lib/content";
-import { Callout, Checklist, PageIntro, Section, SectionHead } from "@/components/ui";
+import {
+  CapabilityIcon,
+  Callout,
+  Checklist,
+  PageIntro,
+  Section,
+  SectionHead,
+} from "@/components/ui";
+import u from "@/components/ui/ui.module.scss";
 import s from "./expertise.module.scss";
 
 export const metadata: Metadata = {
@@ -23,7 +31,12 @@ export default function ExpertisePage() {
           {capabilities.map((c) => (
             <article key={c.id} id={c.id} className={s.block}>
               <div className={s.head}>
-                <p className={s.index}>{c.index}</p>
+                <div className={s.headTop}>
+                  <span className={u.iconPlate}>
+                    <CapabilityIcon id={c.id} size={22} />
+                  </span>
+                  <p className={s.index}>{c.index}</p>
+                </div>
                 <h2 className={s.title}>{c.title}</h2>
                 <p className={s.summary}>{c.summary}</p>
               </div>

@@ -1,7 +1,7 @@
 /* -------------------------- shared contact section ------------------------ */
 
 .contact {
-  background: var(--grey-050);
+  background: var(--grey-075);
   border-top: var(--border);
   padding-block: clamp(3.25rem, 5vw, 5rem);
 }
@@ -74,7 +74,7 @@
 }
 
 .rowValue a:hover {
-  color: var(--accent-700);
+  color: var(--blue-600);
 }
 
 .actions {

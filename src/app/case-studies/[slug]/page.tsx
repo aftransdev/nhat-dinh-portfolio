@@ -114,7 +114,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
           )}
         </Step>
 
-        <Step step="03" name="Contribution">
+        <Step step="03" name="My Contribution">
           <p className={`${s.text} ${s.textLead}`}>{study.contribution.intro}</p>
           {study.contribution.items && (
             <div className={s.spaced}>
@@ -127,7 +127,7 @@ export default async function CaseStudyPage({ params }: { params: Promise<Params
         </Step>
 
         {study.actions.length > 0 && (
-          <Step step="04" name="Actions">
+          <Step step="04" name="Key Actions">
             {study.actions.map((a) => (
               <div key={a.title} className={s.action}>
                 <h3 className={s.actionTitle}>{a.title}</h3>

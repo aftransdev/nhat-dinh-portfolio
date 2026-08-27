@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { about, capabilities, caseStudies, hero, selectedImpact } from "@/lib/content";
-import { siteConfig } from "@/lib/site";
+import { media, siteConfig } from "@/lib/site";
 import {
   ArrowRight,
   Button,
+  CapabilityIcon,
   Card,
   CardBody,
   CardIndex,
@@ -16,9 +17,19 @@ import {
   SectionHead,
   TextLink,
 } from "@/components/ui";
+import u from "@/components/ui/ui.module.scss";
 import s from "./home.module.scss";
 
 const featured = caseStudies.filter((c) => c.featured);
+
+/* Four figures for the panel over the portrait — the fuller six-figure strip
+   follows immediately below in the navy band. */
+const heroPanel = [
+  { value: "150+", label: "Projects governed" },
+  { value: "€5–10M", label: "Portfolio funding" },
+  { value: "7+ yrs", label: "PMO experience" },
+  { value: "6", label: "Agile squads" },
+];
 
 export default function HomePage() {
   return (
@@ -28,15 +39,18 @@ export default function HomePage() {
         <div className="shell">
           <div className={`${s.heroGrid} rise`}>
             <div>
-              <h1 className={s.name}>{hero.name}</h1>
-              <div className={s.roleLine}>
+              <div className={s.eyebrowRow}>
                 {["PMO", "Portfolio Governance", "Transformation"].map((r, i) => (
-                  <span key={r} style={{ display: "inline-flex", alignItems: "center", gap: "0.75rem" }}>
+                  <span
+                    key={r}
+                    style={{ display: "inline-flex", alignItems: "center", gap: "0.75rem" }}
+                  >
                     {i > 0 && <span className={s.roleDiv} aria-hidden="true" />}
                     <span className={s.roleItem}>{r}</span>
                   </span>
                 ))}
               </div>
+              <h1 className={s.name}>{hero.name}</h1>
               <p className={s.headline}>{hero.headline}</p>
               <div className={s.heroBody}>
                 <p>{hero.lede}</p>
@@ -62,17 +76,28 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className={s.glance} aria-label="Profile at a glance">
-              <div className={s.glanceHead}>
-                <p className="eyebrow eyebrow--muted">At a glance</p>
+            {/* Portrait with the headline figures overlapping its lower-left */}
+            <div className={s.portraitWrap}>
+              <span className={s.portraitRule} aria-hidden="true" />
+              <div className={s.portraitFrame}>
+                <img
+                  className={s.portrait}
+                  src={media.portrait}
+                  alt={`${hero.name}, ${siteConfig.shortRole}`}
+                  width={1100}
+                  height={1375}
+                />
               </div>
-              {hero.glance.map((row) => (
-                <div key={row.label} className={s.glanceRow}>
-                  <p className={s.glanceLabel}>{row.label}</p>
-                  <p className={s.glanceValue}>{row.value}</p>
-                </div>
-              ))}
-            </aside>
+              <aside className={s.kpiPanel} aria-label="Portfolio scale at a glance">
+                <p className={s.kpiPanelLabel}>Portfolio scale</p>
+                {heroPanel.map((k) => (
+                  <div key={k.label} className={s.kpiPanelRow}>
+                    <span className={s.kpiPanelValue}>{k.value}</span>
+                    <span className={s.kpiPanelLine}>{k.label}</span>
+                  </div>
+                ))}
+              </aside>
+            </div>
           </div>
         </div>
       </section>
@@ -91,7 +116,12 @@ export default function HomePage() {
         <Grid cols={3}>
           {capabilities.map((c) => (
             <Card key={c.id} href={`/expertise#${c.id}`} className={s.expertiseCard}>
-              <CardIndex>{c.index}</CardIndex>
+              <span className={s.cardHead}>
+                <span className={u.iconPlate}>
+                  <CapabilityIcon id={c.id} size={21} />
+                </span>
+                <CardIndex>{c.index}</CardIndex>
+              </span>
               <CardTitle>{c.title}</CardTitle>
               <CardBody>{c.summary}</CardBody>
             </Card>
@@ -104,7 +134,7 @@ export default function HomePage() {
         <SectionHead
           eyebrow="Featured case studies"
           title="Governance applied in complex delivery environments"
-          sub="Each case follows the same structure: context, challenge, contribution, actions and quantified outcomes."
+          sub="Each case follows the same structure: context, challenge, my contribution, key actions and quantified outcomes."
           aside={<TextLink href="/case-studies">All case studies</TextLink>}
         />
         <Grid cols={3}>
@@ -135,7 +165,7 @@ export default function HomePage() {
             <p style={{ marginTop: "1.25rem" }}>
               <Link
                 href="/experience"
-                style={{ color: "var(--accent-700)", fontWeight: 600, fontSize: "0.9375rem" }}
+                style={{ color: "var(--blue-600)", fontWeight: 600, fontSize: "0.9375rem" }}
               >
                 Full experience and credentials →
               </Link>

@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
       <PageIntro
         eyebrow="Case Studies"
         title="Selected examples of PMO and portfolio governance in complex delivery environments."
-        lede="These case studies focus on the challenge, my contribution and measurable outcomes rather than simply listing responsibilities. Each follows the same structure: context, challenge, contribution, actions and outcomes."
+        lede="These case studies focus on the challenge, my contribution and measurable outcomes rather than simply listing responsibilities. Each follows the same structure: context, challenge, my contribution, key actions and outcomes."
       />
 
       <Section>

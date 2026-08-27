@@ -42,9 +42,9 @@
 }
 
 .secondary:hover {
-  border-color: var(--navy-700);
-  color: var(--navy-700);
-  background: var(--grey-025);
+  border-color: var(--accent-700);
+  color: var(--accent-800);
+  background: var(--accent-050);
 }
 
 .onNavy {
@@ -99,7 +99,7 @@
 }
 
 .section--grey {
-  background: var(--grey-050);
+  background: var(--grey-075);
   border-block: var(--border);
 }
 
@@ -420,7 +420,7 @@ a.card:hover::before,
 /* -------------------------------- page intro ------------------------------ */
 
 .intro {
-  background: var(--grey-050);
+  background: var(--grey-075);
   border-bottom: var(--border);
   padding-block: clamp(3rem, 5vw, 4.75rem);
 }
@@ -536,6 +536,40 @@ a.card:hover::before,
 .note {
   border: var(--border);
   border-radius: var(--radius);
-  background: var(--grey-050);
+  background: var(--white);
   padding: 1.25rem 1.5rem;
+}
+
+/* -------------------------- capability icon plate ------------------------- */
+
+.iconPlate {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 3px;
+  background: var(--accent-050);
+  border: 1px solid var(--accent-100);
+  color: var(--accent-700);
+  flex: none;
+}
+
+.iconPlate--sm {
+  width: 2.375rem;
+  height: 2.375rem;
+}
+
+a.card:hover .iconPlate,
+.card--interactive:hover .iconPlate {
+  background: var(--accent-700);
+  border-color: var(--accent-700);
+  color: var(--white);
+}
+
+.iconPlate,
+a.card .iconPlate {
+  transition:
+    background-color 0.18s var(--ease),
+    border-color 0.18s var(--ease),
+    color 0.18s var(--ease);
 }

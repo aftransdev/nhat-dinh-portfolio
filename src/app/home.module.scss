@@ -1,64 +1,65 @@
 /* ----------------------------------- hero --------------------------------- */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   border-bottom: var(--border);
-  padding-block: clamp(3.25rem, 6vw, 5.5rem) clamp(3rem, 5vw, 4.75rem);
-  background:
-    linear-gradient(180deg, var(--grey-050) 0%, var(--white) 100%);
+  padding-block: clamp(2.75rem, 5vw, 4.5rem) clamp(3rem, 5vw, 4.75rem);
+  background: linear-gradient(180deg, var(--grey-075) 0%, var(--grey-050) 62%, var(--grey-050) 100%);
 }
 
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
-  gap: 3rem 4.5rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem 4rem;
+  align-items: center;
 }
 
-.name {
-  font-size: clamp(2.375rem, 1.55rem + 3.4vw, 4rem);
-  font-weight: 600;
-  letter-spacing: -0.038em;
-  line-height: 1;
-  color: var(--navy-900);
-}
-
-.roleLine {
+.eyebrowRow {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 0.75rem;
-  margin-top: 1.125rem;
-  padding-bottom: 1.5rem;
-  border-bottom: var(--border-strong);
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--grey-300);
 }
 
 .roleItem {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent-700);
 }
 
 .roleDiv {
   width: 1px;
-  height: 0.75rem;
+  height: 0.6875rem;
   background: var(--grey-300);
 }
 
+.name {
+  margin-top: 1.5rem;
+  font-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.625rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--navy-900);
+}
+
 .headline {
-  margin-top: 1.75rem;
-  font-size: clamp(1.375rem, 1.05rem + 1.4vw, 2rem);
+  margin-top: 1.25rem;
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.8125rem);
   font-weight: 500;
-  letter-spacing: -0.022em;
-  line-height: 1.32;
-  color: var(--ink);
-  max-width: 34ch;
+  letter-spacing: -0.024em;
+  line-height: 1.3;
+  color: var(--navy-800);
+  max-width: 30ch;
 }
 
 .heroBody {
-  margin-top: 1.5rem;
-  max-width: 40rem;
+  margin-top: 1.375rem;
+  max-width: 36rem;
 }
 
 .heroBody p {
@@ -69,7 +70,7 @@
 }
 
 .heroBody p + p {
-  margin-top: 0.875rem;
+  margin-top: 0.75rem;
 }
 
 .locationLine {
@@ -77,7 +78,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem 0.75rem;
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--ink-3);
@@ -87,54 +88,143 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.625rem;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
 }
 
-/* At-a-glance credential panel — data, not decoration */
-.glance {
-  background: var(--white);
-  border: var(--border);
+/* ------------------------- portrait + KPI overlay ------------------------- */
+
+.portraitWrap {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 27rem;
+  padding-bottom: 2.5rem;
+}
+
+.portraitFrame {
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  /* Dissolve the base and the outer edges so the portrait sits in the page
+     rather than on top of it. Two axes, intersected. */
+  --fade: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 5%, #000 66%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 9%, #000 93%, rgba(0, 0, 0, 0) 100%);
+  mask-image: var(--fade);
+  mask-composite: intersect;
+  -webkit-mask-image: var(--fade);
+  -webkit-mask-composite: source-in;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: 50% 8%;
+}
+
+/* Thin navy rule anchoring the portrait to the grid */
+.portraitRule {
+  position: absolute;
+  left: -0.125rem;
+  top: 2.5rem;
+  bottom: 7rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-700), rgba(15, 118, 110, 0));
+}
+
+.kpiPanel {
+  position: absolute;
+  left: -8rem;
+  bottom: 0.5rem;
+  width: 15rem;
+  background: var(--navy-900);
   border-radius: var(--radius);
-  padding: 1.5rem 1.625rem 1.75rem;
+  padding: 1.25rem 1.375rem 1.375rem;
+  box-shadow: 0 18px 44px -22px rgba(11, 31, 51, 0.5);
 }
 
-.glanceHead {
-  padding-bottom: 0.875rem;
-  border-bottom: var(--border);
+.kpiPanelLabel {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-500);
 }
 
-.glanceRow {
-  padding-block: 0.9375rem;
-  border-bottom: var(--hairline);
+.kpiPanelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.875rem;
+  padding-block: 0.625rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.glanceRow:last-child {
+.kpiPanelRow:last-child {
   border-bottom: 0;
   padding-bottom: 0;
 }
 
-.glanceLabel {
-  font-size: 0.6875rem;
+.kpiPanelValue {
+  font-size: 1.0625rem;
   font-weight: 600;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--ink-4);
+  color: var(--white);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.022em;
+  white-space: nowrap;
 }
 
-.glanceValue {
-  margin-top: 0.3125rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  line-height: 1.45;
-  color: var(--ink);
+.kpiPanelLine {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--on-navy-2);
+  text-align: right;
 }
 
 @media (max-width: 1000px) {
   .heroGrid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .glance {
-    max-width: 34rem;
+  .portraitWrap {
+    justify-self: start;
+    max-width: 24rem;
+    padding-bottom: 0;
+    padding-left: 2.75rem;
+  }
+  .portraitRule {
+    left: 2.75rem;
+  }
+  .kpiPanel {
+    position: static;
+    width: auto;
+    max-width: 24rem;
+    margin-top: 1.25rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  /* Dividers strand themselves at the head of a wrapped line */
+  .roleDiv {
+    display: none;
+  }
+  .eyebrowRow,
+  .locationLine {
+    gap: 0.25rem 1.125rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .portraitWrap {
+    padding-left: 0;
+    max-width: none;
+  }
+  .portraitRule {
+    display: none;
   }
 }
 
@@ -142,6 +232,14 @@
 
 .expertiseCard {
   padding: 1.625rem 1.5rem 1.75rem;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.125rem;
 }
 
 /* ------------------------------- case studies ----------------------------- */

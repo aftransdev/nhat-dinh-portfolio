@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {
-  development,
+  certifications,
   education,
   hero,
   languages,
@@ -130,11 +130,15 @@ export default function CvPage() {
 
           <section className={s.block}>
             <p className={s.blockLabel}>Professional development</p>
-            {development.map((d) => (
+            {certifications.map((d) => (
               <div key={d.name} className={s.credRow}>
                 <span className={s.credName}>
                   {d.name}
-                  <span className={s.credSub}>{d.issuer}</span>
+                  <span className={s.credSub}>
+                    {d.issuer}
+                    {d.platform ? ` · ${d.platform}` : ""}
+                    {d.courses ? ` · ${d.courses}` : ""}
+                  </span>
                 </span>
                 <span className={s.credYear}>{d.year}</span>
               </div>

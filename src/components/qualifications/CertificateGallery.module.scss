@@ -1,0 +1,297 @@
+/* ------------------------------ credential cards -------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition:
+    border-color 0.18s var(--ease),
+    box-shadow 0.18s var(--ease);
+}
+
+.card:hover {
+  border-color: var(--accent-500);
+  box-shadow: 0 1px 2px rgba(11, 31, 51, 0.05), 0 12px 28px -16px rgba(11, 31, 51, 0.18);
+}
+
+.thumbWrap {
+  display: block;
+  position: relative;
+  background: var(--grey-075);
+  border-bottom: var(--border);
+  padding: 1rem;
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  object-position: center;
+}
+
+.zoom {
+  position: absolute;
+  right: 1.375rem;
+  bottom: 1.375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.6875rem;
+  border-radius: 2px;
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.18s var(--ease),
+    transform 0.18s var(--ease);
+}
+
+.card:hover .zoom,
+.card:focus-visible .zoom {
+  opacity: 1;
+  transform: none;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.375rem 1.5rem 1.5rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: var(--hairline);
+}
+
+.issuer {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.year {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-4);
+}
+
+.name {
+  margin-top: 0.875rem;
+  font-size: 1.0625rem;
+  letter-spacing: -0.014em;
+  line-height: 1.35;
+}
+
+.focus {
+  margin-top: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.foot {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--grey-200);
+  border-radius: 2px;
+  background: var(--grey-050);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--ink-3);
+}
+
+.viewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.card:hover .viewLink svg {
+  transform: translateX(3px);
+}
+
+.viewLink svg {
+  transition: transform 0.18s var(--ease);
+}
+
+/* Credentials with no certificate file on record */
+.plain {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 1.125rem 1.5rem;
+  background: var(--white);
+  border: var(--border);
+  border-radius: var(--radius);
+}
+
+.plainName {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.plainSub {
+  margin-top: 0.1875rem;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* --------------------------------- lightbox ------------------------------- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.75rem, 2.5vw, 2.5rem);
+  background: rgba(5, 18, 31, 0.66);
+  animation: fade 0.16s var(--ease) both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 74rem;
+  max-height: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 70px -20px rgba(5, 18, 31, 0.55);
+}
+
+.dialogHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: var(--border);
+  flex: none;
+}
+
+.dialogIssuer {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+}
+
+.dialogName {
+  margin-top: 0.375rem;
+  font-size: 1.1875rem;
+  letter-spacing: -0.018em;
+}
+
+.dialogMeta {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+}
+
+.dialogMeta a {
+  color: var(--blue-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--ink-2);
+  transition:
+    border-color 0.16s var(--ease),
+    color 0.16s var(--ease);
+}
+
+.close:hover {
+  border-color: var(--navy-700);
+  color: var(--navy-900);
+}
+
+.dialogBody {
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  padding: clamp(0.75rem, 1.5vw, 1.5rem);
+  background: var(--grey-075);
+}
+
+.full {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--white);
+  border: var(--border);
+  border-radius: 2px;
+}

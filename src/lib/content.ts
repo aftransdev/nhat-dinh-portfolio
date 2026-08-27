@@ -703,6 +703,10 @@ export const education = [
     institution: "Vrije Universiteit Amsterdam",
     location: "Amsterdam, Netherlands",
     period: "2024–2025",
+    note: "Specialised in leadership and change management, with coursework spanning organisational change, strategy execution and management decision-making — the disciplines that sit directly behind portfolio governance work.",
+    image: "/media/graduation-vu-amsterdam.jpg",
+    imageAlt:
+      "Nhat Dinh at the Vrije Universiteit Amsterdam graduation ceremony, holding the MSc Business Administration certificate",
   },
   {
     qualification: "Bachelor of Economics",
@@ -713,24 +717,77 @@ export const education = [
   },
 ];
 
-export const development = [
-  { name: "Agile with Atlassian Jira", issuer: "Atlassian", year: "2026" },
-  {
-    name: "Microsoft Program Management Professional Certificate",
-    issuer: "Microsoft",
-    year: "2026",
-  },
+export type Certification = {
+  name: string;
+  issuer: string;
+  platform?: string;
+  year: string;
+  awarded?: string;
+  courses?: string;
+  image?: string;
+  thumb?: string;
+  verify?: string;
+  focus: string;
+};
+
+export const certifications: Certification[] = [
   {
     name: "Advanced Project Management: Asana, Jira, Confluence and AI",
     issuer: "Coursera",
+    platform: "Professional Certificate",
     year: "2026",
+    awarded: "26 August 2026",
+    courses: "9 courses",
+    image: "/media/certificates/advanced-project-management.jpg",
+    thumb: "/media/certificates/advanced-project-management-thumb.jpg",
+    verify: "https://coursera.org/verify/professional-cert/FKPAYXS9EVQH",
+    focus:
+      "Project phases and methods, integrated planning and estimation, milestone tracking, resource and change control, agile workflow automation, and AI-assisted reporting, dashboards and risk.",
+  },
+  {
+    name: "Agile with Atlassian Jira",
+    issuer: "Atlassian",
+    platform: "Coursera",
+    year: "2026",
+    awarded: "25 August 2026",
+    image: "/media/certificates/agile-atlassian-jira.jpg",
+    thumb: "/media/certificates/agile-atlassian-jira-thumb.jpg",
+    verify: "https://coursera.org/verify/LZWXAN7EMXXK",
+    focus:
+      "Agile delivery in Jira: backlog and board configuration, sprint mechanics, workflow design and delivery reporting.",
+  },
+  {
+    name: "Microsoft Program Management Professional Certificate",
+    issuer: "Microsoft",
+    platform: "Professional Certificate",
+    year: "2026",
+    awarded: "25 August 2026",
+    courses: "7 courses",
+    image: "/media/certificates/microsoft-program-management.jpg",
+    thumb: "/media/certificates/microsoft-program-management-thumb.jpg",
+    verify: "https://coursera.org/verify/professional-cert/5ZXDJDTABCZQ",
+    focus:
+      "Programme management fundamentals, stakeholder communication, performance domains, agile and hybrid approaches, and programme finance and investment.",
   },
   {
     name: "Microsoft Power BI Data Analyst Professional Certificate",
     issuer: "Microsoft",
+    platform: "Professional Certificate",
     year: "2025",
+    awarded: "14 August 2025",
+    courses: "8 courses",
+    image: "/media/certificates/microsoft-power-bi-data-analyst.jpg",
+    thumb: "/media/certificates/microsoft-power-bi-data-analyst-thumb.jpg",
+    verify: "https://coursera.org/verify/professional-cert/YENQNAG227SZ",
+    focus:
+      "Data preparation, ETL, data modelling with the star schema, DAX, report and dashboard design, and PL-300 exam preparation.",
   },
-  { name: "SQL for Data Analytics", issuer: "Udemy", year: "2022" },
+  {
+    name: "SQL for Data Analytics",
+    issuer: "Udemy",
+    year: "2022",
+    focus: "Querying, joins and aggregation for reporting and portfolio data consolidation.",
+  },
 ];
 
 export const languages = [

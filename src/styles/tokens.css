@@ -7,53 +7,60 @@
 
 :root {
   /* Primary — deep navy */
-  --navy-950: #050d1a;
-  --navy-900: #0a1b32;
-  --navy-800: #102640;
-  --navy-700: #183754;
-  --navy-600: #22496b;
-  --navy-500: #3a6389;
+  --navy-950: #05121f;
+  --navy-900: #0b1f33;
+  --navy-800: #12293f;
+  --navy-700: #1b3a52;
+  --navy-600: #2a4c68;
+  --navy-500: #3f6280;
 
-  /* Accent — subtle steel blue */
-  --accent-800: #12406f;
-  --accent-700: #1b5289;
-  --accent-600: #2a6aab;
-  --accent-500: #4585c4;
-  --accent-100: #dbe7f4;
-  --accent-050: #eff4fa;
+  /* Accent — teal. Highlights, active tabs, icons, key metrics. */
+  --accent-800: #0a544e;
+  --accent-700: #0f766e;
+  --accent-600: #13847c;
+  --accent-500: #2aa79e;
+  --accent-100: #cfe4e2;
+  --accent-050: #e9f3f2;
 
-  /* Neutrals */
+  /* Secondary — blue. Supporting links and secondary data series. */
+  --blue-700: #274d73;
+  --blue-600: #315f8c;
+  --blue-500: #4a78a4;
+  --blue-100: #d6e2ec;
+  --blue-050: #edf2f7;
+
+  /* Neutrals — warm off-white through soft slate */
   --white: #ffffff;
-  --grey-025: #fafbfc;
-  --grey-050: #f5f7f9;
-  --grey-075: #f0f3f6;
-  --grey-100: #e8ecf1;
-  --grey-200: #dde3ea;
-  --grey-300: #c9d1db;
-  --grey-400: #a8b3c1;
+  --grey-025: #fbfaf7;
+  --grey-050: #f7f6f2;
+  --grey-075: #eef2f4;
+  --grey-100: #e7ebee;
+  --grey-200: #dde3e7;
+  --grey-300: #c8d0d6;
+  --grey-400: #a4adb6;
 
   /* Text */
-  --ink: #0d1826;
-  --ink-2: #3b4a5c;
-  --ink-3: #6a7889;
-  --ink-4: #8d99a8;
+  --ink: #0b1f33;
+  --ink-2: #5b6573;
+  --ink-3: #757e8c;
+  --ink-4: #949ca8;
   --on-navy: #ffffff;
-  --on-navy-2: #b8c8dc;
-  --on-navy-3: #8aa0bd;
+  --on-navy-2: #b9c6d2;
+  --on-navy-3: #8b9caa;
 
-  /* RAG status */
-  --ok: #1a6f52;
-  --ok-bg: #e7f2ec;
-  --ok-bd: #c3ddd0;
-  --warn: #96660a;
-  --warn-bg: #faf2e1;
-  --warn-bd: #e6d4a8;
-  --risk: #a82e28;
-  --risk-bg: #f9ebe9;
-  --risk-bd: #eccdc9;
-  --info: #1b5289;
-  --info-bg: #eaf1f9;
-  --info-bd: #cbdcee;
+  /* RAG — restrained, and held clear of the teal accent */
+  --ok: #2c7a4b;
+  --ok-bg: #e9f2ec;
+  --ok-bd: #c6dccf;
+  --warn: #96650b;
+  --warn-bg: #faf3e3;
+  --warn-bd: #e5d5ab;
+  --risk: #a33a31;
+  --risk-bg: #f9edeb;
+  --risk-bd: #ecd0cc;
+  --info: #315f8c;
+  --info-bg: #edf2f7;
+  --info-bd: #d0dde9;
 
   /* Structure */
   --border: 1px solid var(--grey-200);
@@ -94,7 +101,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--white);
+  background: var(--grey-050);
   color: var(--ink-2);
   font-family: var(--font-sans);
   font-size: 1rem;

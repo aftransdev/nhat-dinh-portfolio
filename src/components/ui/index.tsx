@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import type { Kpi } from "@/lib/content";
 import s from "./ui.module.scss";
 
+export { CapabilityIcon } from "./CapabilityIcon";
+
 export const cx = (...parts: (string | false | null | undefined)[]) =>
   parts.filter(Boolean).join(" ");
 
