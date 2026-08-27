@@ -31,7 +31,7 @@
 
 .index {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--fs-meta);
   font-weight: 500;
   letter-spacing: 0.1em;
   color: var(--accent-700);
@@ -39,13 +39,13 @@
 
 .title {
   margin-top: 0;
-  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem);
+  font-size: var(--fs-md);
   letter-spacing: -0.022em;
 }
 
 .summary {
   margin-top: 0.875rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--ink-3);
   text-wrap: pretty;
@@ -53,7 +53,7 @@
 }
 
 .intro {
-  font-size: 1.0625rem;
+  font-size: var(--fs-body);
   line-height: 1.62;
   color: var(--ink);
   text-wrap: pretty;
@@ -65,7 +65,7 @@
 
 .closing {
   margin-top: 1.5rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   line-height: 1.65;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -93,11 +93,11 @@
 .techLabel {
   padding-bottom: 0.875rem;
   border-bottom: var(--border);
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: var(--ink-4);
+  color: var(--accent-700);
 }
 
 .techItems {
@@ -108,7 +108,7 @@
 
 .techItem {
   padding-block: 0.5rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   color: var(--ink);
   border-bottom: var(--hairline);

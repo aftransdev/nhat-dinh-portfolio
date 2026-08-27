@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { education, languages, toolkit } from "@/lib/content";
+import { education, languages } from "@/lib/content";
 import { CertificateGallery } from "@/components/qualifications/CertificateGallery";
-import { PageIntro, Section, SectionHead, TagRow } from "@/components/ui";
+import { PageIntro, Section, SectionHead } from "@/components/ui";
 import s from "./qualifications.module.scss";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function QualificationsPage() {
     <>
       <PageIntro
         eyebrow="Qualifications"
-        title="Education and professional certification behind the delivery record."
+        title="Education and professional qualifications behind the delivery record."
         lede="A postgraduate grounding in leadership and change management, an economics degree, and current certification across programme management, agile delivery tooling and portfolio analytics."
       />
 
@@ -105,45 +105,6 @@ export default function QualificationsPage() {
           ))}
         </div>
 
-        <div style={{ marginTop: "3rem" }}>
-          <SectionHead eyebrow="Toolkit" title="Tools applied in practice" />
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(16rem, 1fr))",
-              gap: "1.25rem",
-            }}
-          >
-            {toolkit.map((t) => (
-              <div
-                key={t.group}
-                style={{
-                  background: "var(--white)",
-                  border: "var(--border)",
-                  borderRadius: "var(--radius)",
-                  padding: "1.5rem",
-                }}
-              >
-                <p
-                  style={{
-                    paddingBottom: "0.875rem",
-                    borderBottom: "var(--border)",
-                    fontSize: "0.6875rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.11em",
-                    textTransform: "uppercase",
-                    color: "var(--ink-4)",
-                  }}
-                >
-                  {t.group}
-                </p>
-                <div style={{ marginTop: "0.875rem" }}>
-                  <TagRow items={t.items} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </Section>
     </>
   );

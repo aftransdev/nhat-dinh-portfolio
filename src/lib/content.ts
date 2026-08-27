@@ -15,7 +15,7 @@ export const hero = {
   glance: [
     { label: "Experience", value: "7+ years across PMO & governance" },
     { label: "Sectors", value: "Digital banking · Retail · Finance · Trading" },
-    { label: "Portfolio scale", value: "150+ concurrent projects · €5–10M funding" },
+    { label: "Portfolio scale", value: "150+ concurrent projects · €5M+ funding" },
     { label: "Based in", value: "Netherlands" },
     { label: "Availability", value: "Open to London relocation" },
   ],
@@ -23,8 +23,8 @@ export const hero = {
 
 export const selectedImpact: Kpi[] = [
   { value: "150+", label: "Concurrent projects governed across an enterprise portfolio." },
-  { value: "€5–10M", label: "Portfolio funding consolidated into leadership-level views." },
-  { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
+  { value: "€5M+", label: "Portfolio funding visibility, consolidated into leadership-level views." },
+  { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
   { value: "80%", label: "Reduction in monthly portfolio reporting effort." },
   { value: "90%", label: "Reduction in overdue cross-team dependencies." },
   { value: "6", label: "Agile squads supported through integrated delivery governance." },
@@ -133,7 +133,7 @@ export const capabilities: Capability[] = [
       "Financial variance reporting",
     ],
     evidence: [
-      "At Pharmacity, I consolidated delivery, resource and financial information into portfolio-level views covering €5–10M in funding and 100+ portfolio contributors.",
+      "At Pharmacity, I consolidated delivery, resource and financial information into portfolio-level views covering €5M+ in funding and 100+ portfolio contributors.",
       "At POSCO International, I supported budgets, forecasts and resource planning across a €1–5M financial scope.",
     ],
   },
@@ -236,8 +236,8 @@ export const caseStudies: CaseStudy[] = [
       "Strengthened governance and executive visibility across a portfolio of more than 150 concurrent projects.",
     cardMetrics: [
       { value: "150+", label: "Projects" },
-      { value: "€5–10M", label: "Portfolio funding" },
-      { value: "33% → 100%", label: "Governance submissions" },
+      { value: "€5M+", label: "Portfolio funding" },
+      { value: "33% → 100%", label: "Governance submissions" },
     ],
     context: [
       "Pharmacity is a leading pharmacy retailer in Vietnam with approximately 1,000 stores.",
@@ -297,7 +297,7 @@ export const caseStudies: CaseStudy[] = [
           "Benefits tracking",
         ],
         closing:
-          "This provided leadership with visibility across €5–10M in portfolio funding and more than 100 portfolio contributors.",
+          "This provided leadership with visibility across €5M+ in portfolio funding and more than 100 portfolio contributors.",
       },
       {
         title: "Executive Reporting",
@@ -309,14 +309,14 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcomes: [
       { value: "150+", label: "Concurrent projects governed." },
-      { value: "€5–10M", label: "Portfolio funding represented in consolidated management views." },
+      { value: "€5M+", label: "Portfolio funding represented in consolidated management views." },
       { value: "100+", label: "Portfolio contributors represented across resource and funding views." },
-      { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
+      { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
       {
         value: "50+",
         label: "Delivery, financial, risk and resource measures consolidated into executive KPIs.",
       },
-      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
+      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
       { value: "80%", label: "Reduction in reporting effort." },
     ],
     capabilities: [
@@ -416,7 +416,7 @@ export const caseStudies: CaseStudy[] = [
         label: "Product, Technology and Data contributors represented across integrated delivery views.",
       },
       { value: "90%", label: "Reduction in overdue cross-team dependencies." },
-      { value: "3 wks → 1 wk", label: "Reduction in new-project onboarding to governance." },
+      { value: "3 wks → 1 wk", label: "Reduction in new-project onboarding to governance." },
       { value: "10+", label: "Senior stakeholders supported through tailored portfolio reporting." },
     ],
     capabilities: [
@@ -443,7 +443,7 @@ export const caseStudies: CaseStudy[] = [
       "Simplified portfolio reporting by standardising governance artefacts, KPIs and data consolidation routines.",
     cardMetrics: [
       { value: "50+", label: "Measures consolidated" },
-      { value: "25 hrs → 5 hrs", label: "Monthly effort" },
+      { value: "25 hrs → 5 hrs", label: "Monthly effort" },
       { value: "80%", label: "Reduction in reporting effort" },
     ],
     context: [
@@ -485,7 +485,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     outcomes: [
-      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
+      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
       { value: "80%", label: "Reduction in monthly reporting effort." },
       {
         value: "50+",
@@ -610,8 +610,8 @@ export const roles: Role[] = [
     ],
     metrics: [
       { value: "150+", label: "Concurrent projects governed" },
-      { value: "€5–10M", label: "Portfolio funding visibility" },
-      { value: "33% → 100%", label: "On-time governance submissions" },
+      { value: "€5M+", label: "Portfolio funding visibility" },
+      { value: "33% → 100%", label: "On-time governance submissions" },
       { value: "80%", label: "Reduction in reporting effort" },
     ],
     notes: [
@@ -642,7 +642,7 @@ export const roles: Role[] = [
       { value: "6", label: "Agile squads supported" },
       { value: "100+", label: "Monthly work items" },
       { value: "90%", label: "Fewer overdue dependencies" },
-      { value: "3 wks → 1 wk", label: "New-project onboarding" },
+      { value: "3 wks → 1 wk", label: "New-project onboarding" },
     ],
     notes: [
       "30+ Product, Technology and Data contributors",
@@ -813,7 +813,7 @@ export const about = {
 
 export const contact = {
   heading: "Open to London opportunities.",
-  body: "I am interested in roles across PMO, Portfolio Governance, Programme Governance, Business Operations and Transformation.",
+  body: "I am open to PMO, Portfolio Governance, Programme Governance, Business Operations and Transformation opportunities in London.",
   interests: [
     "PMO",
     "Portfolio Governance",

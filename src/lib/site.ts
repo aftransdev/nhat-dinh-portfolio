@@ -5,9 +5,7 @@ export const siteConfig = {
   baseURL: "https://nhatdinh.netlify.app",
   email: "dtmnhat.uk@gmail.com",
   linkedin: "https://www.linkedin.com/in/dtmnhat",
-  /* Swap this for "/nhat-dinh-cv.pdf" once a PDF is dropped into /public.
-     Until then it points at the print-optimised CV route. */
-  cvHref: "/cv",
+  /* No generic CV is published — a tailored one goes to each employer. */
   location: "Netherlands",
   availability: "Open to London opportunities",
 } as const;

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, siteConfig } from "@/lib/site";
-import { IconDownload } from "@/components/ui";
 import s from "./SiteHeader.module.scss";
 
 const isActive = (pathname: string, href: string) =>
@@ -42,11 +41,11 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            {/* Anchors the contact block at the foot of whichever page is open */}
             <span className={s.headerCta}>
-              <Link className={s.cta} href={siteConfig.cvHref}>
-                <IconDownload size={13} />
-                CV
-              </Link>
+              <a className={s.cta} href="#contact">
+                Contact Me
+              </a>
             </span>
           </nav>
 
@@ -81,11 +80,10 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <a className={s.panelLink} href="#contact" onClick={() => setOpen(false)}>
+            Contact Me
+          </a>
           <div className={s.panelActions}>
-            <Link className={s.cta} href={siteConfig.cvHref}>
-              <IconDownload size={13} />
-              Download CV
-            </Link>
             <a
               className={s.cta}
               href={siteConfig.linkedin}
@@ -93,6 +91,9 @@ export function SiteHeader() {
               rel="noreferrer noopener"
             >
               LinkedIn
+            </a>
+            <a className={s.cta} href={`mailto:${siteConfig.email}`}>
+              Email
             </a>
           </div>
         </div>

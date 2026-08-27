@@ -34,10 +34,25 @@ export const IconMail = ({ size = 14 }: { size?: number }) => (
   </svg>
 );
 
-export const IconDownload = ({ size = 14 }: { size?: number }) => (
+export const IconMapPin = ({ size = 14 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 3v11m0 0 4.5-4.5M12 14l-4.5-4.5" stroke="currentColor" strokeWidth="1.7" />
-    <path d="M3.5 17v3.5h17V17" stroke="currentColor" strokeWidth="1.7" />
+    <path
+      d="M12 21.5s7-6.1 7-11.2A7 7 0 0 0 5 10.3c0 5.1 7 11.2 7 11.2Z"
+      stroke="currentColor"
+      strokeWidth="1.7"
+    />
+    <circle cx="12" cy="10" r="2.6" stroke="currentColor" strokeWidth="1.7" />
+  </svg>
+);
+
+export const IconPlane = ({ size = 14 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path
+      d="M2.5 13.2l19-7.7-4.2 15-4.6-4.3-3.2 3.4-.4-4.6L2.5 13.2Z"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 

@@ -16,6 +16,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       priority: 0.7,
     })),
-    { url: `${siteConfig.baseURL}/cv`, lastModified, priority: 0.6 },
   ];
 }

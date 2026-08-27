@@ -22,7 +22,7 @@ const careerStats = [
   { value: "7+", label: "Years across PMO and governance" },
   { value: "4", label: "Organisations, three sectors" },
   { value: "150+", label: "Concurrent projects at peak" },
-  { value: "€5–10M", label: "Largest portfolio funding governed" },
+  { value: "€5M+", label: "Largest portfolio funding governed" },
   { value: "CEO / CFO", label: "Reporting audiences supported" },
 ];
 

@@ -73,7 +73,24 @@
   --gutter: 2rem;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Type */
+  /* Type — three tiers only, plus a single uppercase label register.
+     Hierarchy comes from weight, colour and spacing, not from more sizes. */
+  --fs-lg: clamp(2.125rem, 1.35rem + 2.6vw, 3.25rem);   /* 34 → 52px  page and hero titles */
+  --fs-md: clamp(1.5rem, 1.28rem + 0.8vw, 2rem);        /* 24 → 32px  section headings */
+  --fs-card: 1.375rem;                                  /* 22px       card headings, foot of the medium tier */
+  --fs-body: 1.125rem;                                  /* 18px       prose */
+  --fs-meta: 1rem;                                      /* 16px       dense metadata and chips */
+  --fs-label: 0.8125rem;                                /* 13px       uppercase labels only */
+
+  /* Data display, sized off the same scale */
+  --fs-figure: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
+  --fs-figure-sm: 1.5rem;
+
+  --fw-lg: 700;
+  --fw-md: 650;
+  --fw-body: 400;
+  --fw-strong: 500;
+
   --font-sans: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   --font-mono: var(--font-mono-plex), "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -104,9 +121,9 @@ body {
   background: var(--grey-050);
   color: var(--ink-2);
   font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  font-weight: var(--fw-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -121,10 +138,27 @@ h5,
 h6 {
   margin: 0;
   color: var(--ink);
-  font-weight: 600;
-  letter-spacing: -0.019em;
-  line-height: 1.18;
+  font-weight: var(--fw-md);
+  letter-spacing: -0.021em;
+  line-height: 1.2;
   text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-lg);
+  letter-spacing: -0.032em;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: var(--fs-md);
+}
+
+/* Card headings share the medium tier, held at its lower end */
+h3,
+h4 {
+  font-size: var(--fs-card);
 }
 
 p {
@@ -185,19 +219,21 @@ table {
 
 .eyebrow {
   margin: 0;
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent-700);
 }
 
-.eyebrow--muted {
-  color: var(--ink-4);
+/* Every section label is teal, on light grounds and on navy alike */
+.eyebrow--muted,
+.eyebrow--on-navy {
+  color: var(--accent-500);
 }
 
-.eyebrow--on-navy {
-  color: var(--on-navy-3);
+.eyebrow--muted {
+  color: var(--accent-700);
 }
 
 .num {
@@ -206,8 +242,8 @@ table {
 }
 
 .lede {
-  font-size: clamp(1.0625rem, 0.95rem + 0.45vw, 1.3125rem);
-  line-height: 1.55;
+  font-size: clamp(1.125rem, 1.02rem + 0.4vw, 1.375rem);
+  line-height: 1.58;
   color: var(--ink-2);
   text-wrap: pretty;
 }

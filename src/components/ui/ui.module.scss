@@ -8,7 +8,7 @@
   gap: 0.5rem;
   padding: 0.6875rem 1.25rem;
   border-radius: var(--radius);
-  font-size: 0.8125rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.055em;
   text-transform: uppercase;
@@ -73,7 +73,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4375rem;
-  font-size: 0.8125rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.055em;
   text-transform: uppercase;
@@ -124,12 +124,12 @@
 
 .sectionTitle {
   margin-top: 0.75rem;
-  font-size: clamp(1.5rem, 1.15rem + 1.3vw, 2.125rem);
+  font-size: var(--fs-md);
 }
 
 .sectionSub {
   margin-top: 0.875rem;
-  font-size: 1.0625rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -162,7 +162,7 @@
 a.card:hover,
 .card--interactive:hover {
   border-color: var(--grey-300);
-  box-shadow: 0 1px 2px rgba(13, 24, 38, 0.05), 0 8px 24px -12px rgba(13, 24, 38, 0.14);
+  box-shadow: 0 2px 8px -4px rgba(11, 31, 51, 0.12);
 }
 
 a.card:hover::before,
@@ -172,7 +172,7 @@ a.card:hover::before,
 
 .cardIndex {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--fs-meta);
   font-weight: 500;
   letter-spacing: 0.06em;
   color: var(--ink-4);
@@ -180,13 +180,13 @@ a.card:hover::before,
 
 .cardTitle {
   margin-top: 0.875rem;
-  font-size: 1.125rem;
+  font-size: var(--fs-card);
   letter-spacing: -0.012em;
 }
 
 .cardBody {
   margin-top: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   line-height: 1.62;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -232,7 +232,7 @@ a.card:hover::before,
   border: 1px solid var(--grey-200);
   border-radius: 2px;
   background: var(--grey-050);
-  font-size: 0.75rem;
+  font-size: var(--fs-meta);
   font-weight: 500;
   letter-spacing: 0.01em;
   color: var(--ink-2);
@@ -287,7 +287,8 @@ a.card:hover::before,
 
 .metricValue {
   display: block;
-  font-size: 1.0625rem;
+  font-size: var(--fs-figure-sm);
+  text-wrap: balance;
   font-weight: 600;
   color: var(--navy-900);
   font-variant-numeric: tabular-nums;
@@ -298,18 +299,18 @@ a.card:hover::before,
 .metricLabel {
   display: block;
   margin-top: 0.25rem;
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 500;
   letter-spacing: 0.055em;
   text-transform: uppercase;
-  color: var(--ink-4);
+  color: var(--accent-700);
   line-height: 1.35;
 }
 
 /* Large outcome tiles */
 .outcomeGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 0.625rem;
 }
 
@@ -322,8 +323,8 @@ a.card:hover::before,
 }
 
 .outcomeValue {
-  font-size: clamp(1.3125rem, 1.1rem + 0.75vw, 1.75rem);
-  white-space: nowrap;
+  font-size: var(--fs-figure);
+  text-wrap: balance;
   font-weight: 600;
   color: var(--navy-900);
   font-variant-numeric: tabular-nums;
@@ -333,7 +334,7 @@ a.card:hover::before,
 
 .outcomeLabel {
   margin-top: 0.625rem;
-  font-size: 0.875rem;
+  font-size: var(--fs-meta);
   line-height: 1.5;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -372,7 +373,7 @@ a.card:hover::before,
 }
 
 .kpiValue {
-  font-size: clamp(1.75rem, 1.35rem + 1.5vw, 2.625rem);
+  font-size: var(--fs-figure);
   font-weight: 600;
   color: var(--white);
   font-variant-numeric: tabular-nums;
@@ -384,7 +385,7 @@ a.card:hover::before,
   margin-top: 0.625rem;
   padding-bottom: 1.75rem;
   max-width: 20rem;
-  font-size: 0.875rem;
+  font-size: var(--fs-meta);
   line-height: 1.55;
   color: var(--on-navy-2);
   text-wrap: pretty;
@@ -434,12 +435,12 @@ a.card:hover::before,
 
 .introTitle {
   margin-top: 1rem;
-  font-size: clamp(1.875rem, 1.45rem + 1.9vw, 2.75rem);
+  font-size: var(--fs-lg);
   letter-spacing: -0.03em;
 }
 
 .introLede {
-  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1875rem);
+  font-size: var(--fs-card);
   line-height: 1.6;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -467,7 +468,7 @@ a.card:hover::before,
   gap: 0.5625rem;
   padding: 0.5625rem 0.25rem 0.5625rem 0;
   border-bottom: 1px solid var(--grey-100);
-  font-size: 0.875rem;
+  font-size: var(--fs-meta);
   line-height: 1.45;
   color: var(--ink-2);
 }
@@ -491,7 +492,7 @@ a.card:hover::before,
 .bullet {
   position: relative;
   padding-left: 1.25rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -516,7 +517,7 @@ a.card:hover::before,
 }
 
 .calloutLabel {
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -528,7 +529,7 @@ a.card:hover::before,
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
   color: var(--navy-800);
 }

@@ -10,7 +10,6 @@ import {
   CardIndex,
   CardTitle,
   Grid,
-  IconDownload,
   KpiBand,
   MetricRow,
   Section,
@@ -26,7 +25,7 @@ const featured = caseStudies.filter((c) => c.featured);
    follows immediately below in the navy band. */
 const heroPanel = [
   { value: "150+", label: "Projects governed" },
-  { value: "€5–10M", label: "Portfolio funding" },
+  { value: "€5M+", label: "Portfolio funding" },
   { value: "7+ yrs", label: "PMO experience" },
   { value: "6", label: "Agile squads" },
 ];
@@ -68,10 +67,6 @@ export default function HomePage() {
                 </Button>
                 <Button href="/pmo-evidence" variant="secondary">
                   View PMO evidence
-                </Button>
-                <Button href={siteConfig.cvHref} variant="secondary">
-                  <IconDownload size={13} />
-                  Download CV
                 </Button>
               </div>
             </div>

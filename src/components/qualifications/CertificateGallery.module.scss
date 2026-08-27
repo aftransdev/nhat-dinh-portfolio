@@ -22,7 +22,7 @@
 
 .card:hover {
   border-color: var(--accent-500);
-  box-shadow: 0 1px 2px rgba(11, 31, 51, 0.05), 0 12px 28px -16px rgba(11, 31, 51, 0.18);
+  box-shadow: 0 2px 8px -4px rgba(11, 31, 51, 0.12);
 }
 
 .thumbWrap {
@@ -53,7 +53,7 @@
   border-radius: 2px;
   background: var(--navy-900);
   color: var(--white);
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.075em;
   text-transform: uppercase;
@@ -89,7 +89,7 @@
 
 .issuer {
   display: block;
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -99,20 +99,20 @@
 .year {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--fs-meta);
   color: var(--ink-4);
 }
 
 .name {
   margin-top: 0.875rem;
-  font-size: 1.0625rem;
+  font-size: var(--fs-card);
   letter-spacing: -0.014em;
   line-height: 1.35;
 }
 
 .focus {
   margin-top: 0.625rem;
-  font-size: 0.875rem;
+  font-size: var(--fs-meta);
   line-height: 1.6;
   color: var(--ink-2);
   text-wrap: pretty;
@@ -134,7 +134,7 @@
   border: 1px solid var(--grey-200);
   border-radius: 2px;
   background: var(--grey-050);
-  font-size: 0.6875rem;
+  font-size: var(--fs-meta);
   font-weight: 500;
   color: var(--ink-3);
 }
@@ -143,7 +143,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.055em;
   text-transform: uppercase;
@@ -172,14 +172,14 @@
 }
 
 .plainName {
-  font-size: 0.9375rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   color: var(--ink);
 }
 
 .plainSub {
   margin-top: 0.1875rem;
-  font-size: 0.8125rem;
+  font-size: var(--fs-meta);
   color: var(--ink-3);
 }
 
@@ -235,7 +235,7 @@
 }
 
 .dialogIssuer {
-  font-size: 0.6875rem;
+  font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -244,13 +244,13 @@
 
 .dialogName {
   margin-top: 0.375rem;
-  font-size: 1.1875rem;
+  font-size: var(--fs-card);
   letter-spacing: -0.018em;
 }
 
 .dialogMeta {
   margin-top: 0.5rem;
-  font-size: 0.8125rem;
+  font-size: var(--fs-meta);
   color: var(--ink-3);
 }
 

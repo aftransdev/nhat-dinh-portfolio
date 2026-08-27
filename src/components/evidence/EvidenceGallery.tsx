@@ -128,7 +128,7 @@ export const artefacts: Artefact[] = [
       { name: "Benefits tracking", desc: "Expected value against business cases." },
     ],
     experience: [
-      "At Pharmacity, I consolidated resource allocation, budgets, forecasts, CAPEX/OPEX and benefits tracking into portfolio-level views covering €5–10M in funding and more than 100 contributors.",
+      "At Pharmacity, I consolidated resource allocation, budgets, forecasts, CAPEX/OPEX and benefits tracking into portfolio-level views covering €5M+ in funding and more than 100 contributors.",
       "At POSCO International, I supported financial and resource planning across a €1–5M financial scope.",
     ],
   },
@@ -248,7 +248,6 @@ export function EvidenceGallery() {
                 <ArtefactFrame maxScale={1} align="top">
                   <View />
                 </ArtefactFrame>
-                <span className={s.thumbFade} />
                 <span className={s.zoom}>Enlarge</span>
               </div>
               <div className={s.itemBody}>
