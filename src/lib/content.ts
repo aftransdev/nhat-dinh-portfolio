@@ -7,18 +7,17 @@ export type Kpi = { value: string; label: string };
 
 export const hero = {
   name: "Nhat Dinh",
-  role: "PMO | Portfolio Governance | Transformation",
+  role: "Project Delivery | Portfolio Governance | Business Operations | Transformation",
+  pillars: [
+    "Project Delivery",
+    "Portfolio Governance",
+    "Business Operations",
+    "Transformation",
+  ],
   headline:
     "Turning complex portfolios into clear decisions, stronger controls and more predictable delivery.",
   lede: "I help organisations bring structure, visibility and accountability to complex portfolios and transformation programmes.",
-  body: "With 7+ years of experience across digital banking, retail, finance and international operations, I specialise in portfolio governance, integrated planning, RAID and dependency management, financial oversight and executive reporting.",
-  glance: [
-    { label: "Experience", value: "7+ years across PMO & governance" },
-    { label: "Sectors", value: "Digital banking · Retail · Finance · Trading" },
-    { label: "Portfolio scale", value: "150+ concurrent projects · €5M+ funding" },
-    { label: "Based in", value: "Netherlands" },
-    { label: "Availability", value: "Open to London relocation" },
-  ],
+  body: "With 7+ years of experience across digital banking, retail, finance and international operations, I work across project delivery, portfolio governance and business operations — integrated planning, RAID and dependency management, financial oversight and executive reporting.",
 };
 
 export const selectedImpact: Kpi[] = [
@@ -800,7 +799,7 @@ export const about = {
   quote:
     "Governance should make delivery easier to understand — not harder to manage.",
   paragraphs: [
-    "I am a PMO and portfolio governance professional with experience across digital banking, retail transformation, finance and international operations.",
+    "I work across project delivery, portfolio governance, business operations and transformation. My background is in PMO and portfolio governance roles spanning digital banking, retail transformation, finance and international operations.",
     "My work sits between delivery teams and senior management: understanding enough operational detail to identify risks, dependencies and delivery constraints, while translating that information into concise portfolio views that support management action and decision-making.",
     "I have worked across Product, Technology, Finance, Operations and other business functions, supporting portfolio governance, integrated planning, financial oversight, executive reporting and delivery coordination.",
   ],
@@ -813,8 +812,9 @@ export const about = {
 
 export const contact = {
   heading: "Open to London opportunities.",
-  body: "I am open to PMO, Portfolio Governance, Programme Governance, Business Operations and Transformation opportunities in London.",
+  body: "I am open to Project Delivery, PMO, Portfolio Governance, Programme Governance, Business Operations and Transformation opportunities in London.",
   interests: [
+    "Project Delivery",
     "PMO",
     "Portfolio Governance",
     "Programme Governance",

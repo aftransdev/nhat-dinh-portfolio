@@ -16,12 +16,12 @@
 }
 
 .eyebrowRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 0.75rem;
+  /* Flows as text so the four pillars wrap cleanly at a separator */
+  display: block;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--grey-300);
+  line-height: 1.85;
+  text-wrap: balance;
 }
 
 .roleItem {
@@ -30,6 +30,7 @@
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent-700);
+  white-space: nowrap;
 }
 
 .roleDiv {

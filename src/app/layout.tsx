@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s — ${siteConfig.name}`,
   },
   description:
-    "Portfolio governance, integrated planning, RAID and dependency management, financial oversight and executive reporting. 7+ years across digital banking, retail, finance and international operations.",
+    "Project delivery, portfolio governance, business operations and transformation. Integrated planning, RAID and dependency management, financial oversight and executive reporting across digital banking, retail, finance and international operations.",
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -43,13 +43,16 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: siteConfig.name,
-  jobTitle: "PMO, Portfolio Governance & Transformation",
+  jobTitle: "Project Delivery, Portfolio Governance, Business Operations & Transformation",
   email: `mailto:${siteConfig.email}`,
   url: siteConfig.baseURL,
   sameAs: [siteConfig.linkedin],
   address: { "@type": "PostalAddress", addressCountry: "NL" },
   knowsAbout: [
+    "Project delivery",
     "Portfolio governance",
+    "Business operations",
+    "Transformation",
     "Programme management office",
     "Integrated planning",
     "RAID management",

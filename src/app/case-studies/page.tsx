@@ -7,7 +7,7 @@ import s from "./case-studies.module.scss";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Selected examples of PMO and portfolio governance applied in complex delivery environments, structured around challenge, contribution and measurable outcomes.",
+    "Selected examples of project delivery, portfolio governance and business operations applied in complex programme environments, structured around challenge, contribution and measurable outcomes.",
 };
 
 export default function CaseStudiesPage() {
@@ -15,7 +15,7 @@ export default function CaseStudiesPage() {
     <>
       <PageIntro
         eyebrow="Case Studies"
-        title="Selected examples of PMO and portfolio governance in complex delivery environments."
+        title="Selected examples of delivery and governance in complex programme environments."
         lede="These case studies focus on the challenge, my contribution and measurable outcomes rather than simply listing responsibilities. Each follows the same structure: context, challenge, my contribution, key actions and outcomes."
       />
 

@@ -26,7 +26,7 @@ const featured = caseStudies.filter((c) => c.featured);
 const heroPanel = [
   { value: "150+", label: "Projects governed" },
   { value: "€5M+", label: "Portfolio funding" },
-  { value: "7+ yrs", label: "PMO experience" },
+  { value: "7+ yrs", label: "Delivery experience" },
   { value: "6", label: "Agile squads" },
 ];
 
@@ -38,17 +38,22 @@ export default function HomePage() {
         <div className="shell">
           <div className={`${s.heroGrid} rise`}>
             <div>
-              <div className={s.eyebrowRow}>
-                {["PMO", "Portfolio Governance", "Transformation"].map((r, i) => (
-                  <span
-                    key={r}
-                    style={{ display: "inline-flex", alignItems: "center", gap: "0.75rem" }}
-                  >
-                    {i > 0 && <span className={s.roleDiv} aria-hidden="true" />}
-                    <span className={s.roleItem}>{r}</span>
-                  </span>
-                ))}
-              </div>
+              <p className={s.eyebrowRow}>
+                {hero.pillars.map((r, i) => {
+                  const last = i === hero.pillars.length - 1;
+                  return (
+                    <span key={r}>
+                      {/* Separator glued inside the nowrap span; the break
+                          opportunity is the plain space that follows it */}
+                      <span className={s.roleItem}>
+                        {r}
+                        {last ? "" : "\u00A0\u00B7"}
+                      </span>
+                      {last ? "" : " "}
+                    </span>
+                  );
+                })}
+              </p>
               <h1 className={s.name}>{hero.name}</h1>
               <p className={s.headline}>{hero.headline}</p>
               <div className={s.heroBody}>
@@ -104,7 +109,7 @@ export default function HomePage() {
       <Section>
         <SectionHead
           eyebrow="What I do"
-          title="Six capability areas across portfolio governance"
+          title="Six capability areas across delivery and governance"
           sub="The disciplines required to keep a complex portfolio governed, funded and delivery-ready."
           aside={<TextLink href="/expertise">All expertise</TextLink>}
         />

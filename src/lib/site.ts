@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Nhat Dinh",
-  role: "PMO | Portfolio Governance | Transformation",
-  shortRole: "PMO & Portfolio Governance",
+  role: "Project Delivery | Portfolio Governance | Business Operations | Transformation",
+  shortRole: "Project Delivery & Portfolio Governance",
   baseURL: "https://nhatdinh.netlify.app",
   email: "dtmnhat.uk@gmail.com",
   linkedin: "https://www.linkedin.com/in/dtmnhat",

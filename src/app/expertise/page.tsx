@@ -14,7 +14,7 @@ import s from "./expertise.module.scss";
 export const metadata: Metadata = {
   title: "Expertise",
   description:
-    "Six PMO capability areas: portfolio governance, integrated planning, RAID and dependency management, financial and resource governance, executive reporting and PMO process improvement.",
+    "Six capability areas across delivery and governance: portfolio governance, integrated planning, RAID and dependency management, financial and resource governance, executive reporting and PMO process improvement.",
 };
 
 export default function ExpertisePage() {
@@ -22,8 +22,8 @@ export default function ExpertisePage() {
     <>
       <PageIntro
         eyebrow="Expertise"
-        title="Portfolio governance that improves visibility, accountability and decision-making."
-        lede="My experience spans the core disciplines required to support complex portfolios and transformation environments — from governance and planning through to financial oversight, delivery risk and executive reporting."
+        title="Delivery and governance that improve visibility, accountability and decision-making."
+        lede="My experience spans the core disciplines required to run complex delivery, portfolio and business-operations environments — from governance and integrated planning through to financial oversight, delivery risk and executive reporting."
       />
 
       <Section tight>

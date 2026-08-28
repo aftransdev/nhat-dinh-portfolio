@@ -54,8 +54,8 @@ export default async function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 21, fontWeight: 600, letterSpacing: 2.4 }}>NHAT DINH</div>
-          <div style={{ fontSize: 14, color: "#2aa79e", letterSpacing: 2, marginTop: 3 }}>
-            PMO · PORTFOLIO GOVERNANCE · TRANSFORMATION
+          <div style={{ fontSize: 13, color: "#2aa79e", letterSpacing: 1.4, marginTop: 3 }}>
+            PROJECT DELIVERY · PORTFOLIO GOVERNANCE · BUSINESS OPERATIONS · TRANSFORMATION
           </div>
         </div>
       </div>

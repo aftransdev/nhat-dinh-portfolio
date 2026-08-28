@@ -91,7 +91,7 @@ export function SiteFooter() {
       <div className="shell">
         <div className={s.footerInner}>
           <p className={s.copy}>
-            © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.role}
+            © {new Date().getFullYear()} {siteConfig.name} · {siteConfig.shortRole}
           </p>
           <nav className={s.footerNav} aria-label="Footer">
             {nav.map((item) => (
