@@ -21,7 +21,7 @@ import s from "./home.module.scss";
 
 const featured = caseStudies.filter((c) => c.featured);
 
-/* Four figures for the panel over the portrait — the fuller six-figure strip
+/* Four figures for the panel over the portrait. The fuller six figure strip
    follows immediately below in the navy band. */
 const heroPanel = [
   { value: "150+", label: "Projects governed" },
@@ -110,7 +110,7 @@ export default function HomePage() {
         <SectionHead
           eyebrow="What I do"
           title="Six capability areas across delivery and governance"
-          sub="The disciplines required to keep a complex portfolio governed, funded and delivery-ready."
+          sub="The disciplines required to keep a complex portfolio governed, funded and ready to deliver."
           aside={<TextLink href="/expertise">All expertise</TextLink>}
         />
         <Grid cols={3}>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 href="/experience"
                 style={{ color: "var(--blue-600)", fontWeight: 600, fontSize: "0.9375rem" }}
               >
-                Full experience and credentials →
+                Full experience and credentials
               </Link>
             </p>
           </div>

@@ -7,7 +7,7 @@ import s from "./experience.module.scss";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "7+ years across project delivery, portfolio governance, business operations and transformation — retail transformation, digital banking, global trading and international operations.",
+    "7+ years across project delivery, portfolio governance, business operations and transformation, spanning retail transformation, digital banking, global trading and international operations.",
 };
 
 const slug = (r: (typeof roles)[number]) =>
@@ -16,11 +16,11 @@ const slug = (r: (typeof roles)[number]) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-/* Career totals for the supporting column — kept here rather than in content
+/* Career totals for the supporting column, kept here rather than in content
    because they only mean anything alongside this page's timeline. */
 const careerStats = [
   { value: "7+", label: "Years across delivery and governance" },
-  { value: "4", label: "Organisations, three sectors" },
+  { value: "4", label: "Organisations across retail, banking and trading" },
   { value: "150+", label: "Concurrent projects at peak" },
   { value: "€5M+", label: "Largest portfolio funding governed" },
   { value: "CEO / CFO", label: "Reporting audiences supported" },
@@ -32,7 +32,7 @@ export default function ExperiencePage() {
       <PageIntro
         eyebrow="Experience"
         title="7+ years across project delivery, portfolio governance, business operations and transformation."
-        lede="My experience spans retail transformation, digital banking, global trading and international operations — delivery coordination and business operations early on, with increasing focus on PMO, portfolio governance, financial oversight and executive reporting."
+        lede="My experience spans retail transformation, digital banking, global trading and international operations. The early roles centred on delivery coordination and business operations, with later roles moving towards PMO, portfolio governance, financial oversight and executive reporting."
       />
 
       <Section>

@@ -52,7 +52,7 @@ export default function PmoEvidencePage() {
             },
             {
               t: "Illustrative data only",
-              b: "Project names, owners, figures and dates are invented and internally consistent — they represent shape and structure, not real performance.",
+              b: "Project names, owners, figures and dates are invented and internally consistent. They represent shape and structure, not real performance.",
             },
             {
               t: "No proprietary material",

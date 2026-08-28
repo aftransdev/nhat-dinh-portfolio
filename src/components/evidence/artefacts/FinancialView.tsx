@@ -97,7 +97,7 @@ function SCurve() {
   );
 }
 
-/* CAPEX / OPEX split by workstream — stacked horizontal bars */
+/* CAPEX and OPEX split by workstream, stacked horizontal bars */
 function CapexOpex() {
   return (
     <div>
@@ -150,7 +150,7 @@ export function FinancialView() {
     >
       <div className={a.kpiRow} style={{ gridTemplateColumns: "repeat(6, 1fr)" }}>
         <Kpi label="Approved budget" value={fmt(totals.budget)} delta="FY24 envelope" deltaTone="flat" tone="info" />
-        <Kpi label="Full-year forecast" value={fmt(totals.forecast)} delta={`${variance > 0 ? "+" : ""}${variance.toFixed(1)}% vs budget`} deltaTone="down" tone="warn" />
+        <Kpi label="Full year forecast" value={fmt(totals.forecast)} delta={`${variance > 0 ? "up " : "down "}${Math.abs(variance).toFixed(1)}% on budget`} deltaTone="down" tone="warn" />
         <Kpi label="Actual YTD" value={fmt(totals.actual)} delta="73% of budget" deltaTone="flat" tone="ok" />
         <Kpi label="Capitalised" value="56%" delta="CAPEX share of spend" deltaTone="flat" tone="info" />
         <Kpi label="Contributors" value="104" delta="Across 6 workstreams" deltaTone="flat" tone="info" />
@@ -188,8 +188,9 @@ export function FinancialView() {
                     <td className={a.tdNum}>{w.forecast.toLocaleString("en-GB")}</td>
                     <td className={a.tdNum}>{w.actual.toLocaleString("en-GB")}</td>
                     <td className={v > 0.5 ? a.tdNumNeg : a.tdNumPos}>
-                      {v > 0 ? "+" : ""}
-                      {v.toFixed(1)}%
+                      {/* Parentheses for a favourable variance, the way a
+                          finance pack shows it, so no minus sign is needed */}
+                      {v > 0 ? `+${v.toFixed(1)}%` : `(${Math.abs(v).toFixed(1)}%)`}
                     </td>
                     <td className={a.tdNum}>{w.capex}%</td>
                     <td className={a.tdNum}>{w.benefits}</td>
@@ -253,7 +254,7 @@ export function FinancialView() {
               <tr>
                 <td className={a.tdStrong}>POS hardware price movement</td>
                 <td>Retail Ops</td>
-                <td className={a.tdNumPos}>−40</td>
+                <td className={a.tdNumPos}>(40)</td>
                 <td>Released to contingency</td>
               </tr>
               <tr>

@@ -22,8 +22,8 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseURL),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.role}`,
-    template: `%s — ${siteConfig.name}`,
+    default: `${siteConfig.name}, ${siteConfig.role}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description:
     "Project delivery, portfolio governance, business operations and transformation. Integrated planning, RAID and dependency management, financial oversight and executive reporting across digital banking, retail, finance and international operations.",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteConfig.baseURL,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — ${siteConfig.role}`,
+    title: `${siteConfig.name}, ${siteConfig.role}`,
     description:
       "Turning complex portfolios into clear decisions, stronger controls and more predictable delivery.",
   },

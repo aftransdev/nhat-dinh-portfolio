@@ -16,49 +16,49 @@ const forums: {
     name: "Portfolio Review",
     cadence: "Fortnightly",
     chair: "Head of PMO",
-    inputsDue: "T−3 days",
+    inputsDue: "3 days before",
     marks: ["review", "none", "review", "none", "review", "none", "review", "none", "review", "none", "review", "none"],
   },
   {
     name: "Executive Review",
     cadence: "Monthly",
     chair: "CEO",
-    inputsDue: "T−5 days",
+    inputsDue: "5 days before",
     marks: ["none", "submission", "none", "decision", "none", "submission", "none", "decision", "none", "submission", "none", "decision"],
   },
   {
     name: "Financial Review",
     cadence: "Monthly",
     chair: "CFO",
-    inputsDue: "T−4 days",
+    inputsDue: "4 days before",
     marks: ["none", "review", "none", "none", "submission", "review", "none", "none", "submission", "review", "none", "none"],
   },
   {
     name: "Risk Review",
     cadence: "Monthly",
     chair: "Head of Risk",
-    inputsDue: "T−3 days",
+    inputsDue: "3 days before",
     marks: ["review", "none", "none", "submission", "none", "review", "none", "submission", "none", "review", "none", "submission"],
   },
   {
     name: "Change Approval Board",
     cadence: "Weekly",
     chair: "Head of PMO",
-    inputsDue: "T−2 days",
+    inputsDue: "2 days before",
     marks: ["decision", "review", "review", "decision", "review", "review", "decision", "review", "review", "decision", "review", "review"],
   },
   {
     name: "Benefits Review",
     cadence: "Quarterly",
     chair: "CFO",
-    inputsDue: "T−7 days",
+    inputsDue: "7 days before",
     marks: ["none", "none", "none", "none", "none", "none", "submission", "decision", "none", "none", "none", "none"],
   },
   {
     name: "Project Closure Review",
     cadence: "On completion",
     chair: "Head of PMO",
-    inputsDue: "T−5 days",
+    inputsDue: "5 days before",
     marks: ["none", "review", "none", "none", "review", "none", "none", "review", "none", "none", "review", "none"],
   },
 ];
@@ -131,7 +131,7 @@ function Matrix() {
   );
 }
 
-/* On-time submission compliance: the 33% → 100% climb */
+/* On time submission compliance, the climb from 33% to 100% */
 const compliance = [
   { m: "Jan", v: 33 },
   { m: "Feb", v: 41 },
@@ -194,18 +194,18 @@ function ComplianceChart() {
         <line x1={padL} x2={W} y1={H - padB} y2={H - padB} stroke={C.axis} strokeWidth="1" />
       </svg>
       <p style={{ fontSize: 9, color: C.ink3, marginTop: 3 }}>
-        On-time governance submissions — 33% to 100% over twelve reporting periods
+        On time governance submissions rose from 33% to 100% over twelve reporting periods
       </p>
     </div>
   );
 }
 
 const requirements = [
-  { i: "Status report", w: "All initiatives", d: "T−3 days", who: "Project lead" },
-  { i: "RAID update", w: "All initiatives", d: "T−3 days", who: "Project lead" },
-  { i: "Milestone confirmation", w: "All initiatives", d: "T−3 days", who: "Project lead" },
-  { i: "Forecast & accruals", w: "Finance", d: "T−4 days", who: "Finance partner" },
-  { i: "Change requests", w: "Change Board", d: "T−2 days", who: "Requesting lead" },
+  { i: "Status report", w: "All initiatives", d: "3 days before", who: "Project lead" },
+  { i: "RAID update", w: "All initiatives", d: "3 days before", who: "Project lead" },
+  { i: "Milestone confirmation", w: "All initiatives", d: "3 days before", who: "Project lead" },
+  { i: "Forecast & accruals", w: "Finance", d: "4 days before", who: "Finance partner" },
+  { i: "Change requests", w: "Change Board", d: "2 days before", who: "Requesting lead" },
 ];
 
 export function GovernanceCalendar() {
@@ -216,21 +216,21 @@ export function GovernanceCalendar() {
       fields={[
         { label: "Cycle", value: "FY24" },
         { label: "Forums", value: "7" },
-        { label: "On-time rate", value: "100%" },
+        { label: "On time rate", value: "100%" },
       ]}
       footRight="Governance standards · owned by PMO"
     >
       <div className={a.kpiRow} style={{ gridTemplateColumns: "repeat(5, 1fr)" }}>
         <Kpi label="Governance forums" value="7" delta="Weekly to quarterly" deltaTone="flat" tone="info" />
         <Kpi label="Scheduled events / yr" value="94" delta="Published 12 months ahead" deltaTone="flat" tone="info" />
-        <Kpi label="On-time submissions" value="100%" delta="From 33% baseline" deltaTone="up" tone="ok" />
+        <Kpi label="On time submissions" value="100%" delta="From 33% baseline" deltaTone="up" tone="ok" />
         <Kpi label="Decisions recorded" value="118" delta="All with owner and date" deltaTone="flat" tone="ok" />
         <Kpi label="Evidence completeness" value="98%" delta="Audit sample" deltaTone="up" tone="ok" />
       </div>
 
       <Panel
-        title="Governance cadence — weeks 36 to 47"
-        note="rolling 12-week window"
+        title="Governance cadence, weeks 36 to 47"
+        note="rolling 12 week window"
         style={{ flex: 1 }}
         flush
       >

@@ -16,16 +16,16 @@ export const hero = {
   ],
   headline:
     "Turning complex portfolios into clear decisions, stronger controls and more predictable delivery.",
-  lede: "I help organisations bring structure, visibility and accountability to complex portfolios and transformation programmes.",
-  body: "With 7+ years of experience across digital banking, retail, finance and international operations, I work across project delivery, portfolio governance and business operations — integrated planning, RAID and dependency management, financial oversight and executive reporting.",
+  lede: "I take portfolios that have outgrown project by project reporting and give leadership one consolidated view, with a named owner and a date against every risk, dependency and action.",
+  body: "With 7+ years of experience across digital banking, retail, finance and international operations, I work across project delivery, portfolio governance and business operations. My work covers integrated planning, RAID and dependency management, financial oversight and executive reporting.",
 };
 
 export const selectedImpact: Kpi[] = [
   { value: "150+", label: "Concurrent projects governed across an enterprise portfolio." },
-  { value: "€5M+", label: "Portfolio funding visibility, consolidated into leadership-level views." },
-  { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
-  { value: "80%", label: "Reduction in monthly portfolio reporting effort." },
-  { value: "90%", label: "Reduction in overdue cross-team dependencies." },
+  { value: "€5M+", label: "Portfolio funding visibility, consolidated into leadership level views." },
+  { value: "100%", label: "On time governance submissions, up from 33%." },
+  { value: "80%", label: "Less time spent on monthly portfolio reporting, down from 25 hours to 5 hours." },
+  { value: "90%", label: "Reduction in overdue cross team dependencies." },
   { value: "6", label: "Agile squads supported through integrated delivery governance." },
 ];
 
@@ -61,7 +61,7 @@ export const capabilities: Capability[] = [
       "Scope and change control",
       "Portfolio assurance",
       "Governance evidence",
-      "Closure and follow-through",
+      "Closure and follow through",
     ],
     closing:
       "The objective is not governance for its own sake. It is to make responsibilities, decisions, exceptions and required actions visible.",
@@ -76,7 +76,7 @@ export const capabilities: Capability[] = [
       "Individual project plans do not always show the full delivery picture. I build integrated views that connect:",
     items: [
       "Key milestones",
-      "Cross-team dependencies",
+      "Cross team dependencies",
       "Baseline versus actual delivery",
       "Risks and issues",
       "Corrective actions",
@@ -85,7 +85,7 @@ export const capabilities: Capability[] = [
       "Delivery priorities",
     ],
     evidence: [
-      "At Pharmacity, I developed integrated portfolio plans and dependency views covering approximately 45–50 quarterly initiatives.",
+      "At Pharmacity, I developed integrated portfolio plans and dependency views covering approximately 45 to 50 quarterly initiatives.",
       "At Timo Digital Bank, I supported integrated scheduling across six Agile squads.",
     ],
   },
@@ -94,7 +94,7 @@ export const capabilities: Capability[] = [
     index: "03",
     title: "RAID & Dependency Management",
     summary:
-      "Creating visibility across risks, issues and cross-team dependencies, with clear ownership and escalation.",
+      "Creating visibility across risks, issues and cross team dependencies, with clear ownership and escalation.",
     intro:
       "Dependencies often become visible only after they begin affecting delivery. I focus on identifying them earlier and making ownership explicit.",
     items: [
@@ -110,7 +110,7 @@ export const capabilities: Capability[] = [
       "Release risk visibility",
     ],
     evidence: [
-      "At Timo Digital Bank, this approach contributed to a 90% reduction in overdue cross-team dependencies.",
+      "At Timo Digital Bank, this approach contributed to a 90% reduction in overdue cross team dependencies.",
     ],
   },
   {
@@ -132,8 +132,8 @@ export const capabilities: Capability[] = [
       "Financial variance reporting",
     ],
     evidence: [
-      "At Pharmacity, I consolidated delivery, resource and financial information into portfolio-level views covering €5M+ in funding and 100+ portfolio contributors.",
-      "At POSCO International, I supported budgets, forecasts and resource planning across a €1–5M financial scope.",
+      "At Pharmacity, I consolidated delivery, resource and financial information into portfolio level views covering €5M+ in funding and 100+ portfolio contributors.",
+      "At POSCO International, I supported budgets, forecasts and resource planning across a financial scope of €1M to €5M.",
     ],
   },
   {
@@ -141,7 +141,7 @@ export const capabilities: Capability[] = [
     index: "05",
     title: "Executive Reporting",
     summary:
-      "Turning complex portfolio information into concise KPIs, dashboards and decision-ready management narratives.",
+      "Turning portfolio detail into a short set of KPIs, and a written recommendation for each decision leadership has to take.",
     intro: "Good executive reporting should make the important things obvious. I focus reporting on:",
     items: [
       "Portfolio health",
@@ -155,7 +155,7 @@ export const capabilities: Capability[] = [
       "Corrective actions",
     ],
     evidence: [
-      "At Pharmacity, I consolidated more than 50 delivery, budget, risk and resource measures into a focused set of executive KPIs and decision-ready recommendations for CEO and CFO reviews.",
+      "At Pharmacity, I consolidated more than 50 delivery, budget, risk and resource measures into a focused set of executive KPIs and decision ready recommendations for CEO and CFO reviews.",
     ],
   },
   {
@@ -163,7 +163,7 @@ export const capabilities: Capability[] = [
     index: "06",
     title: "PMO Process Improvement",
     summary:
-      "Standardising governance artefacts, reporting routines and workflows to reduce administrative effort and improve delivery visibility.",
+      "Standardising governance artefacts, reporting routines and workflows so the same reporting takes fewer hours to produce each month.",
     intro:
       "PMO processes should create control without creating unnecessary administration.",
     items: [
@@ -175,11 +175,11 @@ export const capabilities: Capability[] = [
       "Confluence governance",
       "Jira Automation",
       "Dashboard development",
-      "AI-assisted PMO workflows",
+      "AI assisted PMO workflows",
     ],
     evidence: [
-      "At Pharmacity, standardisation and reporting improvements reduced monthly reporting effort from approximately 25 hours to 5 hours — an 80% reduction.",
-      "At Timo Digital Bank, standardised PMO templates and routines reduced new-project onboarding to governance from 3 weeks to 1 week.",
+      "At Pharmacity, standardisation and reporting improvements reduced monthly reporting effort from approximately 25 hours to 5 hours, a reduction of 80%.",
+      "At Timo Digital Bank, standardised PMO templates and routines reduced new project onboarding to governance from 3 weeks to 1 week.",
     ],
   },
 ];
@@ -195,7 +195,7 @@ export const toolkit = [
   },
   {
     group: "Workflow & Automation",
-    items: ["Jira Automation", "AI-assisted PMO workflows", "Notion", "Trello"],
+    items: ["Jira Automation", "AI assisted PMO workflows", "Notion", "Trello"],
   },
 ];
 
@@ -229,19 +229,19 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Bringing greater control and executive visibility to a 150+ project portfolio.",
     company: "Pharmacity",
     role: "PMO, Portfolio Governance & Transformation",
-    period: "2022–2024",
+    period: "2022 to 2024",
     featured: true,
     cardSummary:
-      "Strengthened governance and executive visibility across a portfolio of more than 150 concurrent projects.",
+      "Brought more than 150 concurrent projects under one set of documentation, decision, approval and action tracking standards in Jira and Confluence.",
     cardMetrics: [
       { value: "150+", label: "Projects" },
       { value: "€5M+", label: "Portfolio funding" },
-      { value: "33% → 100%", label: "Governance submissions" },
+      { value: "100%", label: "Governance submissions, up from 33%" },
     ],
     context: [
       "Pharmacity is a leading pharmacy retailer in Vietnam with approximately 1,000 stores.",
       "Its portfolio included more than 150 concurrent projects across functions including Finance, Retail Operations, Supply Chain, Commercial, Technology, Data, HR and other business areas.",
-      "At this scale, individual project reporting alone was not sufficient. Leadership required portfolio-level visibility across delivery, governance, financials, resources and cross-functional dependencies.",
+      "At this scale, individual project reporting alone was not sufficient. Leadership required portfolio level visibility across delivery, governance, financials, resources and cross functional dependencies.",
     ],
     challenge: {
       intro: "The governance environment required stronger consistency around:",
@@ -264,7 +264,7 @@ export const caseStudies: CaseStudy[] = [
       intro:
         "I led portfolio governance across more than 150 concurrent projects using Jira and Confluence. My work included:",
       items: [
-        "Enforcing documentation, decision, approval and action-tracking standards",
+        "Enforcing documentation, decision, approval and action tracking standards",
         "Developing integrated portfolio plans",
         "Building dependency views",
         "Tracking milestones, risks and corrective actions",
@@ -280,7 +280,7 @@ export const caseStudies: CaseStudy[] = [
       {
         title: "Integrated Planning",
         intro:
-          "I developed portfolio-level planning and dependency views covering approximately 45–50 quarterly initiatives. These views brought together:",
+          "I developed portfolio level planning and dependency views covering approximately 45 to 50 quarterly initiatives. These views brought together:",
         items: ["Milestones", "Dependencies", "Risks", "Corrective actions", "Delivery status"],
         closing:
           "The objective was to give leadership a clearer basis for prioritisation and change decisions.",
@@ -310,13 +310,12 @@ export const caseStudies: CaseStudy[] = [
       { value: "150+", label: "Concurrent projects governed." },
       { value: "€5M+", label: "Portfolio funding represented in consolidated management views." },
       { value: "100+", label: "Portfolio contributors represented across resource and funding views." },
-      { value: "33% → 100%", label: "Improvement in on-time governance submissions." },
+      { value: "100%", label: "On time governance submissions, up from 33%." },
       {
         value: "50+",
         label: "Delivery, financial, risk and resource measures consolidated into executive KPIs.",
       },
-      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
-      { value: "80%", label: "Reduction in reporting effort." },
+      { value: "5 hours", label: "Monthly reporting effort, down from 25 hours." },
     ],
     capabilities: [
       "Portfolio Governance",
@@ -332,11 +331,11 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "cross-squad-digital-delivery-governance",
     index: "02",
-    title: "Cross-Squad Digital Delivery Governance",
+    title: "Cross Squad Digital Delivery Governance",
     subtitle: "Reducing overdue dependencies by 90% across six Agile squads.",
     company: "Timo Digital Bank",
     role: "PMO, Product Delivery & Portfolio Operations",
-    period: "2021–2022",
+    period: "2021 to 2022",
     featured: true,
     cardSummary:
       "Supported integrated delivery governance across six Agile squads spanning Product, Technology and Data.",
@@ -347,7 +346,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     context: [
       "Timo operated in a digital banking environment with six Agile squads spanning Product, Technology and Data.",
-      "The delivery environment included more than 100 monthly work items and required coordination across multiple teams in a two-week sprint environment.",
+      "The delivery environment included more than 100 monthly work items and required coordination across multiple teams in a two week sprint environment.",
     ],
     challenge: {
       intro:
@@ -376,7 +375,7 @@ export const caseStudies: CaseStudy[] = [
     actions: [
       {
         title: "Dependency Management",
-        intro: "I supported visibility across cross-team dependencies by tracking:",
+        intro: "I supported visibility across cross team dependencies by tracking:",
         items: [
           "Owners",
           "Due dates",
@@ -385,7 +384,7 @@ export const caseStudies: CaseStudy[] = [
           "Mitigating actions",
           "Escalations",
         ],
-        closing: "This contributed to a 90% reduction in overdue cross-team dependencies.",
+        closing: "This contributed to a 90% reduction in overdue cross team dependencies.",
       },
       {
         title: "Delivery & Release Governance",
@@ -396,7 +395,7 @@ export const caseStudies: CaseStudy[] = [
           "Release risk visibility",
           "Planning activities",
           "Retrospectives",
-          "Change-readiness support",
+          "Change readiness support",
         ],
         closing:
           "I tailored portfolio narratives for more than 10 senior stakeholders across Product, Technology and Operations.",
@@ -414,8 +413,8 @@ export const caseStudies: CaseStudy[] = [
         value: "30+",
         label: "Product, Technology and Data contributors represented across integrated delivery views.",
       },
-      { value: "90%", label: "Reduction in overdue cross-team dependencies." },
-      { value: "3 wks → 1 wk", label: "Reduction in new-project onboarding to governance." },
+      { value: "90%", label: "Reduction in overdue cross team dependencies." },
+      { value: "1 week", label: "New project onboarding to governance, down from 3 weeks." },
       { value: "10+", label: "Senior stakeholders supported through tailored portfolio reporting." },
     ],
     capabilities: [
@@ -436,14 +435,14 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Reducing monthly reporting effort by 80%.",
     company: "Pharmacity",
     role: "Portfolio Reporting & Governance Improvement",
-    period: "2022–2024",
+    period: "2022 to 2024",
     featured: true,
     cardSummary:
       "Simplified portfolio reporting by standardising governance artefacts, KPIs and data consolidation routines.",
     cardMetrics: [
       { value: "50+", label: "Measures consolidated" },
-      { value: "25 hrs → 5 hrs", label: "Monthly effort" },
-      { value: "80%", label: "Reduction in reporting effort" },
+      { value: "5 hours", label: "Monthly reporting effort, down from 25 hours" },
+      { value: "80%", label: "Reduction in reporting time" },
     ],
     context: [
       "Portfolio reporting can become highly administrative when information is spread across project updates, governance documents, spreadsheets and delivery systems.",
@@ -455,16 +454,16 @@ export const caseStudies: CaseStudy[] = [
         "Easier to consolidate",
         "More focused on exceptions",
         "More useful for leadership",
-        "Less time-intensive to produce",
+        "Less time intensive to produce",
       ],
     },
     contribution: {
       intro: "I improved the reporting process around four principles.",
       items: [
-        "Consistency — introduced standardised governance artefacts and reporting structures",
-        "Consolidation — combined delivery, budget, risk and resource information into portfolio-level views",
-        "Focus — reduced more than 50 underlying measures into a focused set of executive KPIs",
-        "Repeatability — introduced structured data consolidation routines that reduced repeated manual effort",
+        "Consistency: introduced standardised governance artefacts and reporting structures",
+        "Consolidation: combined delivery, budget, risk and resource information into portfolio level views",
+        "Focus: reduced more than 50 underlying measures into a focused set of executive KPIs",
+        "Repeatability: introduced structured data consolidation routines that reduced repeated manual effort",
       ],
     },
     actions: [
@@ -477,15 +476,15 @@ export const caseStudies: CaseStudy[] = [
           "KPI definitions",
           "Data consolidation routines",
           "Management narratives",
-          "Decision-ready recommendations",
+          "Decision ready recommendations",
         ],
         closing:
           "The objective was to provide leadership with a more focused picture of portfolio performance while reducing the administrative burden of producing it.",
       },
     ],
     outcomes: [
-      { value: "25 hrs → 5 hrs", label: "Monthly reporting effort." },
-      { value: "80%", label: "Reduction in monthly reporting effort." },
+      { value: "5 hours", label: "Monthly reporting effort, down from 25 hours." },
+      { value: "80%", label: "Reduction in the time reporting takes each month." },
       {
         value: "50+",
         label: "Delivery, budget, risk and resource measures consolidated into focused executive KPIs.",
@@ -509,18 +508,18 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Connecting project delivery with financial oversight.",
     company: "POSCO International",
     role: "Finance PMO & Project Governance",
-    period: "2017–2020",
+    period: "2017 to 2020",
     featured: false,
     cardSummary:
-      "Governance across more than 50 finance and business initiatives, combining project controls with financial planning and CFO-level reporting.",
+      "Governance across more than 50 finance and business initiatives, combining project controls with financial planning and CFO level reporting.",
     cardMetrics: [
       { value: "50+", label: "Initiatives" },
-      { value: "€1–5M", label: "Financial scope" },
+      { value: "€1M to €5M", label: "Financial scope" },
       { value: "CFO", label: "Reporting audience" },
     ],
     context: [
       "At POSCO International, I supported governance across more than 50 finance and business initiatives.",
-      "The role combined project controls with financial planning and CFO-level reporting.",
+      "The role combined project controls with financial planning and CFO level reporting.",
     ],
     challenge: {
       intro:
@@ -545,7 +544,7 @@ export const caseStudies: CaseStudy[] = [
     outcomes: [
       { value: "50+", label: "Finance and business initiatives." },
       {
-        value: "€1–5M",
+        value: "€1M to €5M",
         label: "Financial scope covered through budget, forecast and resource-planning activity.",
       },
     ],
@@ -580,17 +579,17 @@ export type Role = {
 
 export const roles: Role[] = [
   {
-    period: "2024 — Present",
+    period: "2024 to present",
     title: "Postgraduate Study & International Relocation",
     company: "The Netherlands",
     scopeLine:
-      "Relocated to the Netherlands and completed an MSc in Business Administration at Vrije Universiteit Amsterdam, alongside professional development in programme management, Jira, Power BI and AI-assisted PMO workflows.",
-    scope: ["MSc Business Administration", "Programme Management", "Power BI", "AI-assisted PMO"],
+      "Relocated to the Netherlands and completed an MSc in Business Administration at Vrije Universiteit Amsterdam, alongside professional development in programme management, Jira, Power BI and AI assisted PMO workflows.",
+    scope: ["MSc Business Administration", "Programme Management", "Power BI", "AI assisted PMO"],
     metrics: [],
     current: true,
   },
   {
-    period: "2022 — 2024",
+    period: "2022 to 2024",
     title: "PMO, Portfolio Governance & Transformation",
     company: "Pharmacity",
     descriptor: "Leading pharmacy retailer · approximately 1,000 stores",
@@ -610,17 +609,16 @@ export const roles: Role[] = [
     metrics: [
       { value: "150+", label: "Concurrent projects governed" },
       { value: "€5M+", label: "Portfolio funding visibility" },
-      { value: "33% → 100%", label: "On-time governance submissions" },
-      { value: "80%", label: "Reduction in reporting effort" },
+      { value: "100%", label: "On time governance submissions, up from 33%" },
+      { value: "80%", label: "Reduction in reporting time" },
     ],
     notes: [
       "100+ portfolio contributors represented in consolidated views",
       "50+ delivery, financial, risk and resource measures consolidated into executive KPIs",
-      "Monthly reporting effort reduced from 25 hours to 5 hours",
     ],
   },
   {
-    period: "2021 — 2022",
+    period: "2021 to 2022",
     title: "PMO, Product Delivery & Portfolio Operations",
     company: "Timo Digital Bank",
     descriptor: "Digital bank & fintech",
@@ -641,7 +639,7 @@ export const roles: Role[] = [
       { value: "6", label: "Agile squads supported" },
       { value: "100+", label: "Monthly work items" },
       { value: "90%", label: "Fewer overdue dependencies" },
-      { value: "3 wks → 1 wk", label: "New-project onboarding" },
+      { value: "1 week", label: "New project onboarding to governance, down from 3 weeks" },
     ],
     notes: [
       "30+ Product, Technology and Data contributors",
@@ -649,7 +647,7 @@ export const roles: Role[] = [
     ],
   },
   {
-    period: "2017 — 2020",
+    period: "2017 to 2020",
     title: "Finance PMO & Project Governance",
     company: "POSCO International",
     descriptor: "POSCO Group · global trading & energy",
@@ -666,11 +664,11 @@ export const roles: Role[] = [
     ],
     metrics: [
       { value: "50+", label: "Finance and business initiatives" },
-      { value: "€1–5M", label: "Financial scope" },
+      { value: "€1M to €5M", label: "Financial scope" },
     ],
   },
   {
-    period: "2016 — 2017",
+    period: "2016 to 2017",
     title: "Operations & Project Coordination",
     company: "Inter-Pacific",
     descriptor: "International trading & logistics",
@@ -701,8 +699,8 @@ export const education = [
     field: "Leadership & Change Management",
     institution: "Vrije Universiteit Amsterdam",
     location: "Amsterdam, Netherlands",
-    period: "2024–2025",
-    note: "Specialised in leadership and change management, with coursework spanning organisational change, strategy execution and management decision-making — the disciplines that sit directly behind portfolio governance work.",
+    period: "2024 to 2025",
+    note: "Specialised in leadership and change management, with coursework spanning organisational change, strategy execution and management decision making. These are the disciplines that sit directly behind portfolio governance work.",
     image: "/media/graduation-vu-amsterdam.jpg",
     imageAlt:
       "Nhat Dinh at the Vrije Universiteit Amsterdam graduation ceremony, holding the MSc Business Administration certificate",
@@ -712,7 +710,7 @@ export const education = [
     field: "International Business Economics",
     institution: "Foreign Trade University",
     location: "Ho Chi Minh City, Vietnam",
-    period: "2012–2016",
+    period: "2012 to 2016",
   },
 ];
 
@@ -741,7 +739,7 @@ export const certifications: Certification[] = [
     thumb: "/media/certificates/advanced-project-management-thumb.jpg",
     verify: "https://coursera.org/verify/professional-cert/FKPAYXS9EVQH",
     focus:
-      "Project phases and methods, integrated planning and estimation, milestone tracking, resource and change control, agile workflow automation, and AI-assisted reporting, dashboards and risk.",
+      "Project phases and methods, integrated planning and estimation, milestone tracking, resource and change control, agile workflow automation, and AI assisted reporting, dashboards and risk.",
   },
   {
     name: "Agile with Atlassian Jira",
@@ -797,10 +795,10 @@ export const languages = [
 
 export const about = {
   quote:
-    "Governance should make delivery easier to understand — not harder to manage.",
+    "Governance should make delivery easier to understand, not harder to manage.",
   paragraphs: [
     "I work across project delivery, portfolio governance, business operations and transformation. My background is in PMO and portfolio governance roles spanning digital banking, retail transformation, finance and international operations.",
-    "My work sits between delivery teams and senior management: understanding enough operational detail to identify risks, dependencies and delivery constraints, while translating that information into concise portfolio views that support management action and decision-making.",
+    "My work sits between delivery teams and senior management: understanding enough operational detail to identify risks, dependencies and delivery constraints, while translating that information into concise portfolio views that support management action and decision making.",
     "I have worked across Product, Technology, Finance, Operations and other business functions, supporting portfolio governance, integrated planning, financial oversight, executive reporting and delivery coordination.",
   ],
   principles: [

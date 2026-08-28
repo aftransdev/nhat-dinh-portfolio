@@ -10,23 +10,23 @@ const functions = [
 ];
 
 const milestones = [
-  { name: "Store replenishment rollout — wave 3", date: "12 Sep", tone: "ok" as const, s: "Complete" },
-  { name: "ERP finance module — UAT exit", date: "26 Sep", tone: "warn" as const, s: "At risk" },
-  { name: "Loyalty platform migration — go-live", date: "08 Oct", tone: "ok" as const, s: "On track" },
+  { name: "Store replenishment rollout, wave 3", date: "12 Sep", tone: "ok" as const, s: "Complete" },
+  { name: "ERP finance module UAT exit", date: "26 Sep", tone: "warn" as const, s: "At risk" },
+  { name: "Loyalty platform migration go live", date: "08 Oct", tone: "ok" as const, s: "On track" },
   { name: "Warehouse WMS cutover", date: "19 Oct", tone: "risk" as const, s: "Delayed" },
-  { name: "Q4 portfolio re-baseline", date: "31 Oct", tone: "ok" as const, s: "On track" },
+  { name: "Q4 portfolio rebaseline", date: "31 Oct", tone: "ok" as const, s: "On track" },
 ];
 
 const risks = [
-  { id: "R-014", desc: "ERP data migration quality below exit criteria", sc: "20", tone: "risk" as const, own: "Technology" },
-  { id: "R-022", desc: "Single-vendor dependency on WMS integrator", sc: "16", tone: "risk" as const, own: "Supply Chain" },
-  { id: "R-031", desc: "Q4 delivery capacity shortfall in Data squad", sc: "12", tone: "warn" as const, own: "Data" },
-  { id: "R-008", desc: "Regulatory change to e-pharmacy licensing", sc: "12", tone: "warn" as const, own: "Legal" },
+  { id: "R014", desc: "ERP data migration quality below exit criteria", sc: "20", tone: "risk" as const, own: "Technology" },
+  { id: "R022", desc: "Single vendor dependency on WMS integrator", sc: "16", tone: "risk" as const, own: "Supply Chain" },
+  { id: "R031", desc: "Q4 delivery capacity shortfall in Data squad", sc: "12", tone: "warn" as const, own: "Data" },
+  { id: "R008", desc: "Regulatory change to online pharmacy licensing", sc: "12", tone: "warn" as const, own: "Legal" },
 ];
 
 const decisions = [
   { desc: "Approve €420k WMS scope change", forum: "Portfolio Board", by: "04 Oct", tone: "risk" as const },
-  { desc: "Re-prioritise Q4 Data squad intake", forum: "Exec Review", by: "09 Oct", tone: "warn" as const },
+  { desc: "Reprioritise Q4 Data squad intake", forum: "Exec Review", by: "09 Oct", tone: "warn" as const },
   { desc: "Confirm loyalty benefits baseline", forum: "Benefits Review", by: "16 Oct", tone: "warn" as const },
 ];
 
@@ -89,7 +89,7 @@ function StatusBars() {
   );
 }
 
-/* Portfolio RAG donut — 152 projects */
+/* Portfolio RAG donut across 152 projects */
 function RagDonut() {
   const data = [
     { label: "Green", value: 101, color: C.ok },
@@ -223,7 +223,7 @@ function BudgetChart() {
 export function ExecutiveDashboard() {
   return (
     <Canvas
-      title="Enterprise Portfolio — Executive Dashboard"
+      title="Enterprise Portfolio Executive Dashboard"
       subtitle="Consolidated delivery, financial, risk and resource view for CEO / CFO portfolio review"
       fields={[
         { label: "Period", value: "FY24 · P09" },
@@ -233,11 +233,11 @@ export function ExecutiveDashboard() {
       footRight="Portfolio Board · monthly"
     >
       <div className={a.kpiRow} style={{ gridTemplateColumns: "repeat(6, 1fr)" }}>
-        <Kpi label="Projects in flight" value="152" delta="+7 vs P08" deltaTone="flat" tone="info" />
-        <Kpi label="On-time governance" value="100%" delta="+9 pts" deltaTone="up" tone="ok" />
-        <Kpi label="Milestones on plan" value="86%" delta="−3 pts" deltaTone="down" tone="warn" />
+        <Kpi label="Projects in flight" value="152" delta="7 more than P08" deltaTone="flat" tone="info" />
+        <Kpi label="On time governance" value="100%" delta="up 9 points" deltaTone="up" tone="ok" />
+        <Kpi label="Milestones on plan" value="86%" delta="down 3 points" deltaTone="down" tone="warn" />
         <Kpi label="Budget utilisation" value="78%" delta="Within tolerance" deltaTone="flat" tone="ok" />
-        <Kpi label="Critical risks open" value="4" delta="+1 vs P08" deltaTone="down" tone="risk" />
+        <Kpi label="Critical risks open" value="4" delta="1 more than P08" deltaTone="down" tone="risk" />
         <Kpi label="Decisions outstanding" value="3" delta="2 due this month" deltaTone="flat" tone="warn" />
       </div>
 
@@ -254,7 +254,7 @@ export function ExecutiveDashboard() {
       </div>
 
       <div className={a.row} style={{ flex: "0.95" }}>
-        <Panel title="Key milestones — next 45 days" style={{ flex: "1.1" }} flush>
+        <Panel title="Key milestones, next 45 days" style={{ flex: "1.1" }} flush>
           {milestones.map((m) => (
             <div key={m.name} className={a.listRow}>
               <span className={a.mono} style={{ fontSize: 9, color: C.ink4, width: 40 }}>

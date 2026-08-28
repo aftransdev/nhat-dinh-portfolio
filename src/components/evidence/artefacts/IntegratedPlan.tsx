@@ -26,16 +26,16 @@ type Bar = {
 
 const bars: Bar[] = [
   { ws: "Retail Ops", name: "Store replenishment rollout", owner: "R. Ha", baseStart: 0.2, baseEnd: 5.4, start: 0.2, end: 5.2, pct: 100, status: "ok", milestone: 5.2, msLabel: "M1" },
-  { ws: "Retail Ops", name: "POS refresh — 320 stores", owner: "R. Ha", baseStart: 3.0, baseEnd: 9.0, start: 3.0, end: 9.6, pct: 72, status: "warn", milestone: 9.6, msLabel: "M4" },
+  { ws: "Retail Ops", name: "POS refresh across 320 stores", owner: "R. Ha", baseStart: 3.0, baseEnd: 9.0, start: 3.0, end: 9.6, pct: 72, status: "warn", milestone: 9.6, msLabel: "M4" },
   { ws: "Technology", name: "ERP finance module", owner: "D. Bui", baseStart: 1.0, baseEnd: 8.6, start: 1.0, end: 9.8, pct: 78, status: "risk", milestone: 9.8, msLabel: "M5" },
   { ws: "Technology", name: "Integration platform uplift", owner: "D. Bui", baseStart: 2.4, baseEnd: 7.8, start: 2.4, end: 7.8, pct: 88, status: "ok" },
   { ws: "Technology", name: "Loyalty platform migration", owner: "M. Pham", baseStart: 4.6, baseEnd: 9.3, start: 4.6, end: 9.3, pct: 64, status: "ok", milestone: 9.3, msLabel: "M3" },
-  { ws: "Supply Chain", name: "WMS cutover — DC1", owner: "T. Ngo", baseStart: 3.8, baseEnd: 9.2, start: 4.4, end: 10.6, pct: 46, status: "risk", milestone: 10.6, msLabel: "M6" },
+  { ws: "Supply Chain", name: "WMS cutover at DC1", owner: "T. Ngo", baseStart: 3.8, baseEnd: 9.2, start: 4.4, end: 10.6, pct: 46, status: "risk", milestone: 10.6, msLabel: "M6" },
   { ws: "Finance", name: "Capitalisation model rebuild", owner: "H. Le", baseStart: 1.6, baseEnd: 6.2, start: 1.6, end: 6.2, pct: 100, status: "ok", milestone: 6.2, msLabel: "M2" },
   { ws: "Data", name: "Customer 360 foundation", owner: "L. Tran", baseStart: 6.0, baseEnd: 11.2, start: 6.6, end: 11.5, pct: 31, status: "warn", milestone: 11.5, msLabel: "M9" },
 ];
 
-/* Cross-project dependencies drawn as elbow connectors between rows */
+/* Cross project dependencies drawn as elbow connectors between rows */
 const links: { from: number; to: number; at: number }[] = [
   { from: 2, to: 5, at: 8.6 },
   { from: 6, to: 3, at: 6.2 },
@@ -52,7 +52,7 @@ function Gantt() {
 
   return (
     <div style={{ display: "flex" }}>
-      {/* Row labels — same height and order as the plot rows */}
+      {/* Row labels, same height and order as the plot rows */}
       <div style={{ flex: "none", width: LABEL_W, paddingTop: HEAD_H }}>
         {bars.map((b, i) => (
           <div
@@ -243,9 +243,9 @@ function Gantt() {
 
 const decisions = [
   { d: "M5 · ERP UAT exit", when: "26 Sep", forum: "Change Board", tone: "risk" as const },
-  { d: "M6 · WMS cutover go/no-go", when: "12 Oct", forum: "Portfolio Board", tone: "risk" as const },
-  { d: "M3 · Loyalty go-live approval", when: "08 Oct", forum: "Exec Review", tone: "warn" as const },
-  { d: "M8 · Q4 re-baseline sign-off", when: "31 Oct", forum: "Portfolio Board", tone: "warn" as const },
+  { d: "M6 · WMS cutover go or no go", when: "12 Oct", forum: "Portfolio Board", tone: "risk" as const },
+  { d: "M3 · Loyalty go live approval", when: "08 Oct", forum: "Exec Review", tone: "warn" as const },
+  { d: "M8 · Q4 rebaseline sign off", when: "31 Oct", forum: "Portfolio Board", tone: "warn" as const },
 ];
 
 const govEvents = [
@@ -258,25 +258,25 @@ const govEvents = [
 export function IntegratedPlan() {
   return (
     <Canvas
-      title="Integrated Portfolio Plan — Quarterly View"
-      subtitle="Initiative timelines, baseline versus actual, cross-project dependencies, milestones and decision points"
+      title="Integrated Portfolio Plan, Quarterly View"
+      subtitle="Initiative timelines, baseline versus actual, cross project dependencies, milestones and decision points"
       fields={[
-        { label: "Cycle", value: "FY24 Q1–Q4" },
+        { label: "Cycle", value: "FY24 Q1 to Q4" },
         { label: "Initiatives", value: "48" },
         { label: "Baseline", value: "v3.1" },
       ]}
-      footRight="Integrated planning · quarterly re-baseline"
+      footRight="Integrated planning · quarterly rebaseline"
     >
       <div className={a.kpiRow} style={{ gridTemplateColumns: "repeat(5, 1fr)" }}>
         <Kpi label="Initiatives in plan" value="48" delta="8 shown" deltaTone="flat" tone="info" />
         <Kpi label="Milestones tracked" value="126" delta="86% on plan" deltaTone="flat" tone="ok" />
-        <Kpi label="Cross-project dependencies" value="31" delta="4 on critical path" deltaTone="flat" tone="warn" />
+        <Kpi label="Cross project dependencies" value="31" delta="4 on critical path" deltaTone="flat" tone="warn" />
         <Kpi label="Baseline slippage" value="+2.4 wks" delta="Avg across portfolio" deltaTone="down" tone="warn" />
         <Kpi label="Decision points open" value="4" delta="2 this month" deltaTone="flat" tone="risk" />
       </div>
 
       <Panel
-        title="Initiative timeline — baseline versus actual"
+        title="Initiative timeline, baseline versus actual"
         note="8 of 48 initiatives"
         style={{ flex: 1 }}
       >

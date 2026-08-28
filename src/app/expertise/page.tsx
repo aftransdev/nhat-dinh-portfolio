@@ -22,8 +22,8 @@ export default function ExpertisePage() {
     <>
       <PageIntro
         eyebrow="Expertise"
-        title="Delivery and governance that improve visibility, accountability and decision-making."
-        lede="My experience spans the core disciplines required to run complex delivery, portfolio and business-operations environments — from governance and integrated planning through to financial oversight, delivery risk and executive reporting."
+        title="Delivery and governance that improve visibility, accountability and decision making."
+        lede="My experience spans the core disciplines required to run complex delivery, portfolio and business operations environments, from governance and integrated planning through to financial oversight, delivery risk and executive reporting."
       />
 
       <Section tight>
@@ -61,7 +61,7 @@ export default function ExpertisePage() {
         <SectionHead
           eyebrow="Technology"
           title="Tools used to deliver governance and reporting"
-          sub="Selected on the basis of what the governance environment needs — not as a capability display."
+          sub="Selected on the basis of what the governance environment needs, not as a capability display."
         />
         <div className={s.techGrid}>
           {toolkit.map((group) => (

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { C, Canvas, Panel, Pill, styles as a } from "./chrome";
 
-/* Contact-sheet of a seven-section executive pack. Each thumbnail is a
+/* Contact sheet of a seven section executive pack. Each thumbnail is a
    miniature of the real slide layout rather than a grey placeholder. */
 
 const SLIDE_W = 233;
@@ -92,16 +92,16 @@ export function SteeringPack() {
   return (
     <Canvas
       title="Executive Steering Pack"
-      subtitle="Decisions and exceptions before detail — seven sections in a fixed order for every portfolio review"
+      subtitle="Decisions and exceptions before detail, in seven sections held in a fixed order for every portfolio review"
       fields={[
         { label: "Review", value: "Portfolio Board" },
         { label: "Sections", value: "7" },
         { label: "Period", value: "FY24 · P09" },
       ]}
-      footRight="Circulated T−2 days · decisions logged T+1"
+      footRight="Circulated 2 days before, decisions logged the next day"
     >
       <div className={a.row} style={{ flex: 1 }}>
-        <Panel title="Pack structure — section thumbnails" note="7 sections" style={{ flex: "2.3" }}>
+        <Panel title="Pack structure, section thumbnails" note="7 sections" style={{ flex: "2.3" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             <Slide n="01" title="Executive Summary">
               <div style={{ marginBottom: 8 }}>
@@ -169,16 +169,16 @@ export function SteeringPack() {
               </div>
             </Slide>
 
-            <Slide n="04" title="Critical Risks & Dependencies">
+            <Slide n="04" title="Critical Risks and Dependencies">
               <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                 {[
-                  { id: "R-014", w: 90, tone: C.risk },
-                  { id: "R-022", w: 76, tone: C.risk },
-                  { id: "R-031", w: 58, tone: C.warn },
-                  { id: "R-008", w: 55, tone: C.warn },
-                  { id: "DEP-052", w: 52, tone: C.warn },
-                  { id: "DEP-038", w: 40, tone: C.accent },
-                  { id: "DEP-041", w: 34, tone: C.accent },
+                  { id: "R014", w: 90, tone: C.risk },
+                  { id: "R022", w: 76, tone: C.risk },
+                  { id: "R031", w: 58, tone: C.warn },
+                  { id: "R008", w: 55, tone: C.warn },
+                  { id: "DEP052", w: 52, tone: C.warn },
+                  { id: "DEP038", w: 40, tone: C.accent },
+                  { id: "DEP041", w: 34, tone: C.accent },
                 ].map((r) => (
                   <MiniRow key={r.id} label={r.id} tone={r.tone} w={r.w} />
                 ))}
@@ -210,7 +210,7 @@ export function SteeringPack() {
               <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                 {[
                   { t: "Approve €420k WMS change", d: "04 Oct" },
-                  { t: "Re-prioritise Data intake", d: "09 Oct" },
+                  { t: "Reprioritise Data intake", d: "09 Oct" },
                   { t: "Confirm benefits baseline", d: "16 Oct" },
                   { t: "Release ERP contingency", d: "18 Oct" },
                   { t: "Approve baseline v3.2", d: "31 Oct" },
@@ -234,10 +234,10 @@ export function SteeringPack() {
               </div>
             </Slide>
 
-            <Slide n="07" title="Actions & Owners">
+            <Slide n="07" title="Actions and Owners">
               <div style={{ display: "flex", flexDirection: "column", gap: 3.5 }}>
                 {[
-                  { o: "D. Bui", t: "Re-plan ERP exit", d: "26 Sep" },
+                  { o: "D. Bui", t: "Replan ERP exit", d: "26 Sep" },
                   { o: "T. Ngo", t: "WMS contingency", d: "03 Oct" },
                   { o: "L. Tran", t: "Q4 capacity options", d: "07 Oct" },
                   { o: "H. Le", t: "Refresh forecast", d: "10 Oct" },
@@ -279,12 +279,12 @@ export function SteeringPack() {
                   color: C.ink4,
                 }}
               >
-                Appendix — not presented
+                Appendix, not presented
               </p>
               <p style={{ fontSize: 8, color: C.ink3, marginTop: 6, lineHeight: 1.5 }}>
                 Detailed project reports, the full RAID register, the financial workbook and the
                 integrated plan are circulated with the pack and available on request. The
-                in-room pack stays at seven sections.
+                in the room pack stays at seven sections.
               </p>
             </div>
           </div>
@@ -295,7 +295,7 @@ export function SteeringPack() {
             {[
               "Fixed section order every cycle",
               "Exceptions and decisions before detail",
-              "One page per section, no appendices in-room",
+              "One page per section, no appendices in the room",
               "Every number traceable to a defined measure",
               "Every action carries an owner and a date",
               "Detail available on request, not by default",
@@ -324,12 +324,12 @@ export function SteeringPack() {
             ))}
           </Panel>
 
-          <Panel title="Audience & circulation" style={{ flex: "0.62" }} flush>
+          <Panel title="Audience and circulation" style={{ flex: "0.62" }} flush>
             {[
               { r: "CEO", s: "Chair · decisions and escalations" },
               { r: "CFO", s: "Financial position and variances" },
               { r: "Function heads", s: "Delivery status and actions" },
-              { r: "PMO", s: "Author · evidence and follow-through" },
+              { r: "PMO", s: "Author · evidence and follow through" },
             ].map((x) => (
               <div key={x.r} className={a.listRow}>
                 <span className={a.listLabel} style={{ flex: "0 0 88px" }}>
@@ -344,11 +344,11 @@ export function SteeringPack() {
 
           <Panel title="Pack cycle" note="monthly" style={{ flex: "0.8" }} flush>
             {[
-              { d: "T−5", s: "Submissions close", tone: "warn" as const },
-              { d: "T−4", s: "Consolidation & QA", tone: "info" as const },
-              { d: "T−2", s: "Pack circulated", tone: "info" as const },
-              { d: "T−0", s: "Board review", tone: "ok" as const },
-              { d: "T+1", s: "Decisions & actions logged", tone: "ok" as const },
+              { d: "5 days", s: "Submissions close", tone: "warn" as const },
+              { d: "4 days", s: "Consolidation and QA", tone: "info" as const },
+              { d: "2 days", s: "Pack circulated", tone: "info" as const },
+              { d: "Review", s: "Board review", tone: "ok" as const },
+              { d: "Next day", s: "Decisions and actions logged", tone: "ok" as const },
             ].map((c) => (
               <div key={c.d} className={a.listRow}>
                 <span className={a.mono} style={{ width: 24, fontSize: 9, color: C.ink4, flex: "none" }}>

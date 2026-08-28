@@ -5,12 +5,12 @@ export const siteConfig = {
   baseURL: "https://nhatdinh.netlify.app",
   email: "dtmnhat.uk@gmail.com",
   linkedin: "https://www.linkedin.com/in/dtmnhat",
-  /* No generic CV is published — a tailored one goes to each employer. */
+  /* No generic CV is published. A tailored one goes to each employer. */
   location: "Netherlands",
   availability: "Open to London opportunities",
 } as const;
 
-/* Drives the header, the mobile panel, the footer and the sitemap — the one
+/* Drives the header, the mobile panel, the footer and the sitemap. The one
    place to add or hide a tab. */
 export const nav = [
   { label: "Home", href: "/" },

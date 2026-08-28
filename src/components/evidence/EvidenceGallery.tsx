@@ -41,7 +41,7 @@ export const artefacts: Artefact[] = [
       { name: "Portfolio health", desc: "Overall portfolio status and movement." },
       { name: "Milestones", desc: "Key upcoming, completed and delayed milestones." },
       { name: "Financial position", desc: "Budget, forecast and variance visibility." },
-      { name: "Top risks", desc: "Highest-impact portfolio risks requiring management attention." },
+      { name: "Top risks", desc: "Highest impact portfolio risks requiring management attention." },
       { name: "Critical dependencies", desc: "Dependencies affecting multiple initiatives or teams." },
       { name: "Resource pressure", desc: "Where delivery demand and available capacity require attention." },
       { name: "Decisions required", desc: "Items requiring leadership approval, direction or escalation." },
@@ -54,7 +54,7 @@ export const artefacts: Artefact[] = [
     id: "raid-dependency-view",
     index: "02",
     title: "RAID & Dependency View",
-    subtitle: "Making delivery risk and cross-team dependencies actionable.",
+    subtitle: "Making delivery risk and cross team dependencies actionable.",
     cta: "View sample RAID & dependency register",
     answers: [
       "What could disrupt delivery?",
@@ -68,13 +68,13 @@ export const artefacts: Artefact[] = [
       { name: "Description & impact", desc: "What it is and what it affects if unresolved." },
       { name: "Owner", desc: "A named individual, never a team inbox." },
       { name: "Affected workstream", desc: "Which initiatives and squads are exposed." },
-      { name: "Due date & status", desc: "Committed date and current state of the response." },
+      { name: "Due date and status", desc: "Committed date and current state of the response." },
       { name: "Mitigation & corrective action", desc: "The specific action being taken." },
       { name: "Escalation required", desc: "Whether the item needs a decision above delivery level." },
     ],
     experience: [
       "At Timo Digital Bank, I maintained integrated schedules and dependency maps across six squads and more than 30 Product, Technology and Data contributors.",
-      "The governance approach contributed to a 90% reduction in overdue cross-team dependencies.",
+      "The governance approach contributed to a 90% reduction in overdue cross team dependencies.",
     ],
   },
   {
@@ -101,7 +101,7 @@ export const artefacts: Artefact[] = [
       { name: "Governance events", desc: "Reviews and approvals falling within the window." },
     ],
     experience: [
-      "At Pharmacity, I built integrated portfolio plans and dependency views across approximately 45–50 quarterly initiatives.",
+      "At Pharmacity, I built integrated portfolio plans and dependency views across approximately 45 to 50 quarterly initiatives.",
       "At Timo Digital Bank, I supported integrated scheduling across six Agile squads.",
     ],
   },
@@ -120,7 +120,7 @@ export const artefacts: Artefact[] = [
     componentsLabel: "Example components",
     components: [
       { name: "Budget", desc: "Approved envelope by workstream." },
-      { name: "Forecast", desc: "Latest full-year position and movement." },
+      { name: "Forecast", desc: "Latest full year position and movement." },
       { name: "CAPEX / OPEX", desc: "Split and capitalisation treatment." },
       { name: "Variance", desc: "Material movements with the driver named." },
       { name: "Resource allocation", desc: "Where contributor capacity is committed." },
@@ -128,8 +128,8 @@ export const artefacts: Artefact[] = [
       { name: "Benefits tracking", desc: "Expected value against business cases." },
     ],
     experience: [
-      "At Pharmacity, I consolidated resource allocation, budgets, forecasts, CAPEX/OPEX and benefits tracking into portfolio-level views covering €5M+ in funding and more than 100 contributors.",
-      "At POSCO International, I supported financial and resource planning across a €1–5M financial scope.",
+      "At Pharmacity, I consolidated resource allocation, budgets, forecasts, CAPEX/OPEX and benefits tracking into portfolio level views covering €5M+ in funding and more than 100 contributors.",
+      "At POSCO International, I supported financial and resource planning across a financial scope of €1M to €5M.",
     ],
   },
   {
@@ -155,7 +155,7 @@ export const artefacts: Artefact[] = [
       { name: "Project closure review", desc: "Evidence, handover and lessons on completion." },
     ],
     experience: [
-      "At Pharmacity, stronger governance standards contributed to an improvement in on-time governance submissions from 33% to 100%.",
+      "At Pharmacity, stronger governance standards contributed to an improvement in on time governance submissions from 33% to 100%.",
     ],
   },
   {
@@ -172,16 +172,16 @@ export const artefacts: Artefact[] = [
     ],
     componentsLabel: "Example structure",
     components: [
-      { name: "01 — Executive summary", desc: "Overall portfolio position and major changes." },
-      { name: "02 — Portfolio health", desc: "Delivery, financial and resource indicators." },
-      { name: "03 — Key changes", desc: "Material developments since the previous review." },
-      { name: "04 — Critical risks & dependencies", desc: "Items requiring management attention." },
-      { name: "05 — Financial position", desc: "Budget, forecast and relevant variances." },
-      { name: "06 — Decisions required", desc: "Specific management decisions or approvals." },
-      { name: "07 — Actions & owners", desc: "Clear follow-up responsibilities and due dates." },
+      { name: "01. Executive summary", desc: "Overall portfolio position and major changes." },
+      { name: "02. Portfolio health", desc: "Delivery, financial and resource indicators." },
+      { name: "03. Key changes", desc: "Material developments since the previous review." },
+      { name: "04. Critical risks and dependencies", desc: "Items requiring management attention." },
+      { name: "05. Financial position", desc: "Budget, forecast and relevant variances." },
+      { name: "06. Decisions required", desc: "Specific management decisions or approvals." },
+      { name: "07. Actions and owners", desc: "Clear follow up responsibilities and due dates." },
     ],
     experience: [
-      "Across Pharmacity, Timo Digital Bank and POSCO International, I translated delivery and financial information into concise reporting for senior stakeholders including CEO, CFO and cross-functional leadership audiences.",
+      "Across Pharmacity, Timo Digital Bank and POSCO International, I translated delivery and financial information into concise reporting for senior stakeholders including CEO, CFO and cross functional leadership audiences.",
     ],
   },
 ];

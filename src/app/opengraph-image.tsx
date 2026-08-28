@@ -3,7 +3,7 @@ import { selectedImpact } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 import { loadInter } from "@/lib/og-font";
 
-export const alt = `${siteConfig.name} — ${siteConfig.role}`;
+export const alt = `${siteConfig.name}, ${siteConfig.role}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

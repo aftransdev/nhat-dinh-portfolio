@@ -6,7 +6,7 @@
    ------------------------------------------------------------------ */
 
 :root {
-  /* Primary — deep navy */
+  /* Primary, deep navy */
   --navy-950: #05121f;
   --navy-900: #0b1f33;
   --navy-800: #12293f;
@@ -14,7 +14,7 @@
   --navy-600: #2a4c68;
   --navy-500: #3f6280;
 
-  /* Accent — teal. Highlights, active tabs, icons, key metrics. */
+  /* Accent teal. Highlights, active tabs, icons, key metrics. */
   --accent-800: #0a544e;
   --accent-700: #0f766e;
   --accent-600: #13847c;
@@ -22,14 +22,14 @@
   --accent-100: #cfe4e2;
   --accent-050: #e9f3f2;
 
-  /* Secondary — blue. Supporting links and secondary data series. */
+  /* Secondary blue. Supporting links and secondary data series. */
   --blue-700: #274d73;
   --blue-600: #315f8c;
   --blue-500: #4a78a4;
   --blue-100: #d6e2ec;
   --blue-050: #edf2f7;
 
-  /* Neutrals — warm off-white through soft slate */
+  /* Neutrals, warm off white through soft slate */
   --white: #ffffff;
   --grey-025: #fbfaf7;
   --grey-050: #f7f6f2;
@@ -48,7 +48,7 @@
   --on-navy-2: #b9c6d2;
   --on-navy-3: #8b9caa;
 
-  /* RAG — restrained, and held clear of the teal accent */
+  /* RAG, restrained and held clear of the teal accent */
   --ok: #2c7a4b;
   --ok-bg: #e9f2ec;
   --ok-bd: #c6dccf;
@@ -73,10 +73,10 @@
   --gutter: 2rem;
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Type — three tiers only, plus a single uppercase label register.
+  /* Type: three tiers only, plus a single uppercase label register.
      Hierarchy comes from weight, colour and spacing, not from more sizes. */
-  --fs-lg: clamp(2.125rem, 1.35rem + 2.6vw, 3.25rem);   /* 34 → 52px  page and hero titles */
-  --fs-md: clamp(1.5rem, 1.28rem + 0.8vw, 2rem);        /* 24 → 32px  section headings */
+  --fs-lg: clamp(2.125rem, 1.35rem + 2.6vw, 3.25rem);   /* 34 to 52px  page and hero titles */
+  --fs-md: clamp(1.5rem, 1.28rem + 0.8vw, 2rem);        /* 24 to 32px  section headings */
   --fs-card: 1.375rem;                                  /* 22px       card headings, foot of the medium tier */
   --fs-body: 1.125rem;                                  /* 18px       prose */
   --fs-meta: 1rem;                                      /* 16px       dense metadata and chips */

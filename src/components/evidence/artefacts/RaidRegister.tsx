@@ -18,14 +18,14 @@ const rows: {
   esc: boolean;
 }[] = [
   {
-    id: "DEP-041",
+    id: "DEP041",
     type: "Dependency",
     typeTone: "info",
     desc: "Card tokenisation API required by Payments squad before onboarding release",
     impact: "High",
     impactTone: "risk",
     owner: "A. Nguyen",
-    workstream: "Technology → Payments",
+    workstream: "Technology to Payments",
     due: "04 Oct",
     status: "On track",
     statusTone: "ok",
@@ -33,7 +33,7 @@ const rows: {
     esc: false,
   },
   {
-    id: "RSK-014",
+    id: "RSK014",
     type: "Risk",
     typeTone: "risk",
     desc: "Data migration quality below UAT exit criteria for customer records",
@@ -44,18 +44,18 @@ const rows: {
     due: "26 Sep",
     status: "Mitigating",
     statusTone: "warn",
-    action: "Second reconciliation cycle scheduled; exit criteria re-agreed with Risk",
+    action: "Second reconciliation cycle scheduled; exit criteria reagreed with Risk",
     esc: true,
   },
   {
-    id: "DEP-052",
+    id: "DEP052",
     type: "Dependency",
     typeTone: "info",
     desc: "KYC vendor sandbox credentials pending for Onboarding squad regression",
     impact: "Medium",
     impactTone: "warn",
     owner: "M. Pham",
-    workstream: "Product → Onboarding",
+    workstream: "Product to Onboarding",
     due: "29 Sep",
     status: "Overdue",
     statusTone: "risk",
@@ -63,14 +63,14 @@ const rows: {
     esc: true,
   },
   {
-    id: "ISS-009",
+    id: "ISS009",
     type: "Issue",
     typeTone: "warn",
-    desc: "Regression suite runtime exceeds sprint window, delaying UAT sign-off",
+    desc: "Regression suite runtime exceeds sprint window, delaying UAT sign off",
     impact: "Medium",
     impactTone: "warn",
     owner: "T. Vo",
-    workstream: "Technology → QA",
+    workstream: "Technology to QA",
     due: "02 Oct",
     status: "In progress",
     statusTone: "warn",
@@ -78,14 +78,14 @@ const rows: {
     esc: false,
   },
   {
-    id: "DEP-038",
+    id: "DEP038",
     type: "Dependency",
     typeTone: "info",
-    desc: "Finance reconciliation file format sign-off for ledger integration",
+    desc: "Finance reconciliation file format sign off for ledger integration",
     impact: "Medium",
     impactTone: "warn",
     owner: "H. Le",
-    workstream: "Finance → Technology",
+    workstream: "Finance to Technology",
     due: "20 Sep",
     status: "Closed",
     statusTone: "ok",
@@ -93,14 +93,14 @@ const rows: {
     esc: false,
   },
   {
-    id: "RSK-022",
+    id: "RSK022",
     type: "Risk",
     typeTone: "risk",
-    desc: "Single-vendor dependency for core integration layer limits contingency",
+    desc: "Single vendor dependency for core integration layer limits contingency",
     impact: "High",
     impactTone: "risk",
     owner: "D. Bui",
-    workstream: "Technology → Platform",
+    workstream: "Technology to Platform",
     due: "31 Oct",
     status: "Mitigating",
     statusTone: "warn",
@@ -152,7 +152,7 @@ function TrendChart() {
         </text>
       </svg>
       <p style={{ fontSize: 9, color: C.ink3, marginTop: 4 }}>
-        Overdue cross-team dependencies per sprint — 17 to 2 across 12 sprints (90% reduction)
+        Overdue cross team dependencies per sprint, falling from 17 to 2 across 12 sprints
       </p>
     </div>
   );
@@ -170,7 +170,7 @@ const byOwner = [
 export function RaidRegister() {
   return (
     <Canvas
-      title="RAID & Cross-Team Dependency Register"
+      title="RAID & Cross Team Dependency Register"
       subtitle="Risks, assumptions, issues and dependencies with named ownership, due dates and escalation state"
       fields={[
         { label: "Sprint", value: "S12 · wk 2" },
@@ -181,14 +181,14 @@ export function RaidRegister() {
     >
       <div className={a.kpiRow} style={{ gridTemplateColumns: "repeat(5, 1fr)" }}>
         <Kpi label="Risks open" value="24" delta="6 high impact" deltaTone="flat" tone="risk" />
-        <Kpi label="Issues open" value="9" delta="−4 vs S11" deltaTone="up" tone="warn" />
+        <Kpi label="Issues open" value="9" delta="4 fewer than S11" deltaTone="up" tone="warn" />
         <Kpi label="Dependencies open" value="31" delta="Across 6 squads" deltaTone="flat" tone="info" />
-        <Kpi label="Overdue dependencies" value="2" delta="−90% vs S1" deltaTone="up" tone="ok" />
+        <Kpi label="Overdue dependencies" value="2" delta="down 90% on sprint 1" deltaTone="up" tone="ok" />
         <Kpi label="Escalated to board" value="4" delta="All with owners" deltaTone="flat" tone="warn" />
       </div>
 
       <Panel
-        title="RAID register — open and recently closed"
+        title="RAID register, open and recently closed"
         note="6 of 64 items shown"
         style={{ flex: 1.15 }}
         flush
@@ -231,7 +231,7 @@ export function RaidRegister() {
                 </td>
                 <td style={{ maxWidth: 210 }}>{r.action}</td>
                 <td style={{ textAlign: "center", color: r.esc ? C.risk : C.ink4, fontWeight: 600 }}>
-                  {r.esc ? "Yes" : "—"}
+                  {r.esc ? "Yes" : "No"}
                 </td>
               </tr>
             ))}
@@ -240,7 +240,7 @@ export function RaidRegister() {
       </Panel>
 
       <div className={a.row} style={{ flex: "0.62" }}>
-        <Panel title="Overdue dependency trend" note="S1 → S12" style={{ flex: "1.1" }}>
+        <Panel title="Overdue dependency trend" note="sprint 1 to sprint 12" style={{ flex: "1.1" }}>
           <TrendChart />
         </Panel>
         <Panel title="Open items by owning team" note="64 items" style={{ flex: "1" }} flush>
@@ -270,9 +270,9 @@ export function RaidRegister() {
         <Panel title="Escalation route" style={{ flex: "0.85" }} flush>
           {[
             { l: "Squad standup", d: "Daily · owner and date confirmed" },
-            { l: "Delivery sync", d: "Weekly · cross-squad impacts" },
+            { l: "Delivery sync", d: "Weekly · cross squad impacts" },
             { l: "Portfolio review", d: "Fortnightly · overdue and high impact" },
-            { l: "Executive review", d: "Monthly · decisions and trade-offs" },
+            { l: "Executive review", d: "Monthly · decisions and trade offs" },
           ].map((s, i) => (
             <div key={s.l} className={a.listRow}>
               <span

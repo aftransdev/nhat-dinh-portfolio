@@ -20,7 +20,7 @@ export function SiteHeader() {
     <header className={s.header}>
       <div className="shell">
         <div className={s.inner}>
-          <Link href="/" className={s.brand} aria-label={`${siteConfig.name} — home`}>
+          <Link href="/" className={s.brand} aria-label={`${siteConfig.name}, home`}>
             <span className={s.monogram} aria-hidden="true">
               ND
             </span>

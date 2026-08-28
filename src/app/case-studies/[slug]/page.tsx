@@ -28,12 +28,12 @@ export async function generateMetadata({
   if (!study) return {};
   return {
     title: study.title,
-    description: `${study.subtitle} ${study.company} — ${study.role}, ${study.period}.`,
+    description: `${study.subtitle} ${study.company}, ${study.role}, ${study.period}.`,
   };
 }
 
 /* Every case renders the same spine so cases stay comparable:
-   Context → Challenge → Contribution → Actions → Outcomes. */
+   Context, Challenge, My Contribution, Key Actions, Outcomes. */
 function Step({
   step,
   name,

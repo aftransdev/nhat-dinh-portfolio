@@ -7,7 +7,7 @@ import s from "./qualifications.module.scss";
 export const metadata: Metadata = {
   title: "Qualifications",
   description:
-    "MSc Business Administration (Vrije Universiteit Amsterdam), Bachelor of Economics, and professional certifications in programme management, Jira, Power BI and AI-assisted delivery.",
+    "MSc Business Administration (Vrije Universiteit Amsterdam), Bachelor of Economics, and professional certifications in programme management, Jira, Power BI and AI assisted delivery.",
 };
 
 const [msc, bachelor] = education;
@@ -35,7 +35,7 @@ export default function QualificationsPage() {
               height={1600}
             />
             <figcaption className={s.caption}>
-              Graduation, Vrije Universiteit Amsterdam — MSc Business Administration.
+              Graduation at Vrije Universiteit Amsterdam, MSc Business Administration.
             </figcaption>
           </figure>
 

@@ -1,4 +1,4 @@
-/* One line-art glyph per capability area. Geometric and restrained — these
+/* One line art glyph per capability area. Geometric and restrained, so these
    read as document iconography, not app icons. */
 
 const paths: Record<string, React.ReactNode> = {
