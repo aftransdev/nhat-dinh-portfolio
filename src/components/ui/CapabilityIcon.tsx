@@ -44,6 +44,18 @@ const paths: Record<string, React.ReactNode> = {
       <path d="m12 16.5 3-3" />
     </>
   ),
+  // A bounded model graph with a review tick: AI governance
+  "ai-governance": (
+    <>
+      <rect x="3" y="3.5" width="18" height="17" rx="2" />
+      <circle cx="8.4" cy="8.4" r="1.35" />
+      <circle cx="15.6" cy="7.4" r="1.35" />
+      <circle cx="12" cy="12.4" r="1.35" />
+      <path d="m9.6 9.4 1.2 2M14.4 8.6 13 11.3" />
+      <path d="m8.4 16.6 1.9 1.9 4.6-4.6" />
+    </>
+  ),
+
   // Closed loop with a step change: process improvement
   "process-improvement": (
     <>

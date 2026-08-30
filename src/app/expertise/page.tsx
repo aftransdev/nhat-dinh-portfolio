@@ -14,7 +14,7 @@ import s from "./expertise.module.scss";
 export const metadata: Metadata = {
   title: "Expertise",
   description:
-    "Six capability areas across delivery and governance: portfolio governance, integrated planning, RAID and dependency management, financial and resource governance, executive reporting and PMO process improvement.",
+    "Seven capability areas across delivery and governance: portfolio governance, integrated planning, RAID and dependency management, financial and resource governance, executive reporting, PMO process improvement and AI governance.",
 };
 
 export default function ExpertisePage() {
@@ -46,6 +46,11 @@ export default function ExpertisePage() {
                   <Checklist items={c.items} />
                 </div>
                 {c.closing && <p className={s.closing}>{c.closing}</p>}
+                {c.principles && (
+                  <div className={s.evidence}>
+                    <Callout label="How I work with AI" items={c.principles} />
+                  </div>
+                )}
                 {c.evidence && (
                   <div className={s.evidence}>
                     <Callout items={c.evidence} />

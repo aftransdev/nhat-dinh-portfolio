@@ -109,7 +109,7 @@ export default function HomePage() {
       <Section>
         <SectionHead
           eyebrow="What I do"
-          title="Six capability areas across delivery and governance"
+          title="Seven capability areas across delivery and governance"
           sub="The disciplines required to keep a complex portfolio governed, funded and ready to deliver."
           aside={<TextLink href="/expertise">All expertise</TextLink>}
         />
@@ -124,6 +124,15 @@ export default function HomePage() {
               </span>
               <CardTitle>{c.title}</CardTitle>
               <CardBody>{c.summary}</CardBody>
+              {c.principles && (
+                <ul className={s.principleList}>
+                  {c.principles.map((line) => (
+                    <li key={line} className={s.principleLine}>
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </Card>
           ))}
         </Grid>

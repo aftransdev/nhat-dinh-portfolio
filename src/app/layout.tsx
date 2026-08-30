@@ -58,6 +58,7 @@ const personSchema = {
     "RAID management",
     "Executive reporting",
     "Financial governance",
+    "AI governance",
   ],
 };
 

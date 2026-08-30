@@ -40,6 +40,7 @@ export type Capability = {
   items: string[];
   closing?: string;
   evidence?: string[];
+  principles?: string[];
 };
 
 export const capabilities: Capability[] = [
@@ -182,6 +183,33 @@ export const capabilities: Capability[] = [
       "At Timo Digital Bank, standardised PMO templates and routines reduced new project onboarding to governance from 3 weeks to 1 week.",
     ],
   },
+  {
+    id: "ai-governance",
+    index: "07",
+    title: "AI Governance in Delivery",
+    summary:
+      "Setting out how AI may be used inside a portfolio: which data it may touch, who reviews what it produces, and who owns the result.",
+    intro:
+      "Delivery teams are already using AI, usually before anyone has written the rules down. My focus is making that use deliberate, recorded and straightforward to explain to an auditor.",
+    items: [
+      "AI use standards",
+      "Data boundaries and confidentiality",
+      "Human review checkpoints",
+      "A named owner for every output",
+      "Audit trail of AI assisted work",
+      "Model and vendor risk on the register",
+      "Tool approval and access control",
+      "AI initiatives on the portfolio plan",
+      "Benefits and data readiness",
+    ],
+    principles: [
+      "AI drafts, a person decides. It produces a first version, never the version that goes out.",
+      "No client, personal or commercially sensitive data leaves the approved boundary.",
+      "Every AI assisted output carries a named owner and is reviewed before it is circulated.",
+    ],
+    closing:
+      "The point is not to slow adoption down. It is to make sure nothing reaches a steering pack without a person who can stand behind it.",
+  },
 ];
 
 export const toolkit = [
@@ -194,8 +222,8 @@ export const toolkit = [
     items: ["Power BI", "Advanced Excel", "PowerPoint", "SQL"],
   },
   {
-    group: "Workflow & Automation",
-    items: ["Jira Automation", "AI assisted PMO workflows", "Notion", "Trello"],
+    group: "Automation & AI",
+    items: ["Jira Automation", "Claude", "Notion", "Trello"],
   },
 ];
 
@@ -800,6 +828,7 @@ export const about = {
     "I work across project delivery, portfolio governance, business operations and transformation. My background is in PMO and portfolio governance roles spanning digital banking, retail transformation, finance and international operations.",
     "My work sits between delivery teams and senior management: understanding enough operational detail to identify risks, dependencies and delivery constraints, while translating that information into concise portfolio views that support management action and decision making.",
     "I have worked across Product, Technology, Finance, Operations and other business functions, supporting portfolio governance, integrated planning, financial oversight, executive reporting and delivery coordination.",
+    "I use AI in my own work the way I would expect a team to use it. It drafts, a person decides, and nothing reaches a steering pack without a named owner who can stand behind it.",
   ],
   principles: [
     { title: "Clear information", body: "One consolidated view, defined measures, no ambiguity." },
